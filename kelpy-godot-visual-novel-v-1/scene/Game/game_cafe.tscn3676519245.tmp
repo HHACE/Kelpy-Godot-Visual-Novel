@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqcxdwp7y2vka"]
+
+[ext_resource type="Script" uid="uid://bwm866mmp8uop" path="res://scene/Game/game_cafe.gd" id="1_uvua1"]
+[ext_resource type="PackedScene" uid="uid://cw2lgoa6bpaq6" path="res://scene/Game/cafe_game/character_body_3d.tscn" id="2_rxidv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rxidv"]
+albedo_color = Color(0, 0.6694015, 0.38232675, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cl1wt"]
+material = SubResource("StandardMaterial3D_rxidv")
+size = Vector3(35, 0.18, 35)
+
+[node name="game_cafe" type="Node3D"]
+script = ExtResource("1_uvua1")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_rxidv")]
+look_sensitivity = 0.006
+jump_velocity = 6.0
+walk_speed = 7.0
+sprint_speed = 8.5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07711893, 0)
+mesh = SubResource("BoxMesh_cl1wt")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.04136, 0)
+layers = 1023
+directional_shadow_max_distance = 485.1

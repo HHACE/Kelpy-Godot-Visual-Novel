@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://b88s4063fqlsr"]
+
+[ext_resource type="Script" uid="uid://pvhdvnepbwae" path="res://scene/UI/Menus/popup_message.gd" id="1_5uskv"]
+
+[node name="Popup_Message" type="CanvasLayer"]
+process_mode = 3
+layer = 10
+visible = false
+script = ExtResource("1_5uskv")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1926.0
+offset_bottom = 1092.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 316.0
+offset_top = 287.0
+offset_right = 1620.0
+offset_bottom = 725.0
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 330.0
+offset_top = 310.0
+offset_right = 1605.0
+offset_bottom = 697.0
+size_flags_horizontal = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 384.0
+offset_top = 329.0
+offset_right = 1551.0
+offset_bottom = 564.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 58
+text = "CANT"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="No" type="Button" parent="Buttons"]
+offset_left = 425.0
+offset_top = 602.0
+offset_right = 811.0
+offset_bottom = 676.0
+theme_override_font_sizes/font_size = 36
+text = "No"
+
+[node name="Yes" type="Button" parent="Buttons"]
+offset_left = 1115.0
+offset_top = 603.0
+offset_right = 1501.0
+offset_bottom = 677.0
+theme_override_font_sizes/font_size = 36
+text = "Yes"
+
+[node name="Single" type="Button" parent="Buttons"]
+offset_left = 781.0
+offset_top = 602.0
+offset_right = 1167.0
+offset_bottom = 676.0
+theme_override_font_sizes/font_size = 36
+text = "Single"
+
+[connection signal="pressed" from="Buttons/No" to="." method="_on_popup_x_button_pressed" binds= ["No"]]
+[connection signal="pressed" from="Buttons/Yes" to="." method="_on_popup_x_button_pressed" binds= ["Yes"]]
+[connection signal="pressed" from="Buttons/Single" to="." method="_on_popup_x_button_pressed" binds= ["Single"]]

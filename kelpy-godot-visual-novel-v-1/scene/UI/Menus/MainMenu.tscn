@@ -1,0 +1,255 @@
+[gd_scene load_steps=13 format=3 uid="uid://da3v1iqunma5d"]
+
+[ext_resource type="Script" uid="uid://c0b6m4y1hiq3q" path="res://scene/UI/Menus/main_menu.gd" id="1_nn17b"]
+[ext_resource type="Texture2D" uid="uid://cf3acei12geoq" path="res://icon.svg" id="2_lnxie"]
+[ext_resource type="PackedScene" uid="uid://rphypixv6x87" path="res://scene/UI/Menus/gallery.tscn" id="3_4il0c"]
+[ext_resource type="PackedScene" uid="uid://c5i8fnf3m4w78" path="res://scene/UI/Menus/menu_setting.tscn" id="3_5cqs1"]
+[ext_resource type="PackedScene" uid="uid://bfyv8a7ta1e3o" path="res://scene/UI/Menus/menu_credit.tscn" id="4_ftyrf"]
+[ext_resource type="PackedScene" uid="uid://c75wvx7spsd1m" path="res://scene/UI/Menus/pause_menu_in_game_dialogue.tscn" id="5_ftyrf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sks6p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lnxie")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lnxie"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lnxie")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lulne"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lnxie")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tf3dk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lnxie")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rvc10"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lnxie")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_85i58"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lnxie")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_nn17b")
+
+[node name="BG" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(14.999999, 8.4375)
+sprite_frames = SubResource("SpriteFrames_sks6p")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 680.0
+offset_top = -46.0
+offset_right = 700.0
+offset_bottom = 1194.0
+
+[node name="Title" type="Label" parent="."]
+z_index = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 220.0
+offset_top = 135.0
+offset_right = 447.0
+offset_bottom = 248.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 82
+text = "Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="Node2D" parent="."]
+
+[node name="SelectIcon" type="Node2D" parent="Options"]
+visible = false
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/SelectIcon"]
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_lnxie")
+autoplay = "default"
+
+[node name="Buttons" type="Node2D" parent="Options"]
+
+[node name="Start" type="Button" parent="Options/Buttons"]
+offset_left = 130.0
+offset_top = 470.0
+offset_right = 557.0
+offset_bottom = 550.0
+theme_override_font_sizes/font_size = 38
+text = "Start"
+
+[node name="Load" type="Button" parent="Options/Buttons"]
+offset_left = 130.0
+offset_top = 562.0
+offset_right = 557.0
+offset_bottom = 642.0
+theme_override_font_sizes/font_size = 38
+text = "Load"
+
+[node name="Gallery" type="Button" parent="Options/Buttons"]
+offset_left = 130.0
+offset_top = 659.0
+offset_right = 557.0
+offset_bottom = 739.0
+theme_override_font_sizes/font_size = 38
+text = "Gallery"
+
+[node name="Setting" type="Button" parent="Options/Buttons"]
+offset_left = 130.0
+offset_top = 750.0
+offset_right = 557.0
+offset_bottom = 830.0
+theme_override_font_sizes/font_size = 38
+text = "Setting
+"
+
+[node name="Credit" type="Button" parent="Options/Buttons"]
+offset_left = 130.0
+offset_top = 850.0
+offset_right = 557.0
+offset_bottom = 930.0
+theme_override_font_sizes/font_size = 38
+text = "Credit
+"
+
+[node name="Exit" type="Button" parent="Options/Buttons"]
+offset_left = 130.0
+offset_top = 950.0
+offset_right = 557.0
+offset_bottom = 1030.0
+theme_override_font_sizes/font_size = 38
+text = "Exit
+"
+
+[node name="Sprites" type="Node2D" parent="Options"]
+visible = false
+z_index = 1
+
+[node name="Start" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(614.00006, 244.99998)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_lulne")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Setting" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(614, 363)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_tf3dk")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Credit" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(616.00006, 486)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_rvc10")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Exit" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(615, 624)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_85i58")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Menus" type="Node2D" parent="Options"]
+z_index = 1
+
+[node name="Gallery" parent="Options/Menus" instance=ExtResource("3_4il0c")]
+visible = false
+
+[node name="Setting" parent="Options/Menus" instance=ExtResource("3_5cqs1")]
+visible = false
+
+[node name="Credit" parent="Options/Menus" instance=ExtResource("4_ftyrf")]
+visible = false
+
+[node name="PauseMenu_InGame_Dialogue" parent="." instance=ExtResource("5_ftyrf")]
+visible = false
+
+[connection signal="pressed" from="Options/Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Options/Buttons/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Options/Buttons/Gallery" to="." method="_on_gallery_pressed"]
+[connection signal="pressed" from="Options/Buttons/Setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="Options/Buttons/Credit" to="." method="_on_credit_pressed"]
+[connection signal="pressed" from="Options/Buttons/Exit" to="." method="_on_exit_pressed"]

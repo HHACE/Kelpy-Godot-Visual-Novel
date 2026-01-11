@@ -1,0 +1,236 @@
+[gd_scene load_steps=11 format=3 uid="uid://cwlfr3lmt55qk"]
+
+[ext_resource type="Texture2D" uid="uid://cf3acei12geoq" path="res://icon.svg" id="1_04b44"]
+[ext_resource type="Script" uid="uid://d30o4xj76o0t2" path="res://scene/UI/Menus/pause_menu_in_game.gd" id="1_xensj"]
+[ext_resource type="PackedScene" uid="uid://c5i8fnf3m4w78" path="res://scene/UI/Menus/menu_setting.tscn" id="2_xensj"]
+[ext_resource type="PackedScene" uid="uid://l56ospvcjcgg" path="res://scene/UI/Menus/save_load.tscn" id="4_xensj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_04b44"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_04b44")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rcs1k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_04b44")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xensj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_04b44")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r2i8n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_04b44")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0d124"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_04b44")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ikaqb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_04b44")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[node name="PauseMenu_InGame" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_xensj")
+
+[node name="BG" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(14.999999, 8.4375)
+sprite_frames = SubResource("SpriteFrames_04b44")
+
+[node name="Title" type="Label" parent="."]
+z_index = 1
+offset_left = 774.0
+offset_top = 88.0
+offset_right = 1153.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 82
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="Node2D" parent="."]
+
+[node name="SelectIcon" type="Node2D" parent="Options"]
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/SelectIcon"]
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_rcs1k")
+autoplay = "default"
+
+[node name="Buttons" type="Node2D" parent="Options"]
+
+[node name="Resume" type="Button" parent="Options/Buttons"]
+offset_left = 750.0
+offset_top = 298.0
+offset_right = 1177.0
+offset_bottom = 418.0
+theme_override_font_sizes/font_size = 38
+text = "Resume"
+
+[node name="Restart" type="Button" parent="Options/Buttons"]
+offset_left = 750.0
+offset_top = 448.0
+offset_right = 1177.0
+offset_bottom = 568.0
+theme_override_font_sizes/font_size = 38
+text = "Restart
+"
+
+[node name="Setting" type="Button" parent="Options/Buttons"]
+offset_left = 750.0
+offset_top = 598.0
+offset_right = 1177.0
+offset_bottom = 718.0
+theme_override_font_sizes/font_size = 38
+text = "Setting
+"
+
+[node name="Main Menu" type="Button" parent="Options/Buttons"]
+offset_left = 750.0
+offset_top = 748.0
+offset_right = 1177.0
+offset_bottom = 868.0
+theme_override_font_sizes/font_size = 38
+text = "Main Menu
+"
+
+[node name="Save" type="Button" parent="Options/Buttons"]
+offset_left = 1240.0
+offset_top = 440.0
+offset_right = 1667.0
+offset_bottom = 560.0
+theme_override_font_sizes/font_size = 38
+text = "Save"
+
+[node name="Load" type="Button" parent="Options/Buttons"]
+offset_left = 1240.0
+offset_top = 632.0
+offset_right = 1667.0
+offset_bottom = 752.0
+theme_override_font_sizes/font_size = 38
+text = "Load
+"
+
+[node name="Sprites" type="Node2D" parent="Options"]
+visible = false
+z_index = 1
+
+[node name="Resume" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(614.00006, 244.99998)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_xensj")
+autoplay = "default"
+
+[node name="Restart" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(614, 363)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_r2i8n")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Setting" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(616.00006, 486)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_0d124")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Main Menu" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(615, 624)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_ikaqb")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Menus" type="Node2D" parent="Options"]
+z_index = 1
+
+[node name="Setting" parent="Options/Menus" instance=ExtResource("2_xensj")]
+visible = false
+
+[node name="SaveLoad" parent="Options/Menus" instance=ExtResource("4_xensj")]
+visible = false
+
+[connection signal="pressed" from="Options/Buttons/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Options/Buttons/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Options/Buttons/Setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="Options/Buttons/Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Options/Buttons/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Options/Buttons/Load" to="." method="_on_load_pressed"]

@@ -1,0 +1,317 @@
+[gd_scene load_steps=16 format=3 uid="uid://cs7dvdr0g70dr"]
+
+[ext_resource type="Script" uid="uid://donb51ulv48et" path="res://scene/Game/game.gd" id="1_4nxsp"]
+[ext_resource type="PackedScene" uid="uid://cwlfr3lmt55qk" path="res://scene/UI/Menus/pause_menu_in_game.tscn" id="2_p7xw7"]
+[ext_resource type="PackedScene" uid="uid://cvpi4eq2uhjfx" path="res://scene/UI/Dialogue/dialogue.tscn" id="2_ugm23"]
+[ext_resource type="Script" uid="uid://d2wt6f0g0mxo6" path="res://scene/UI/Dialogue/icon_settings.gd" id="3_nuuro"]
+[ext_resource type="Texture2D" uid="uid://bns071p2a4hoy" path="res://assets/sprites/(temp) visual novel icons/icons8-bookmark-24.png" id="4_i6hbw"]
+[ext_resource type="Texture2D" uid="uid://ck8wd01gjrodb" path="res://assets/sprites/(temp) visual novel icons/icons8-a-64.png" id="5_ux066"]
+[ext_resource type="Texture2D" uid="uid://cmcx7vbi3gfvn" path="res://assets/sprites/(temp) visual novel icons/icons8-activity-history-64.png" id="6_kj106"]
+[ext_resource type="Texture2D" uid="uid://bs7x16fj15ksh" path="res://assets/sprites/(temp) visual novel icons/icons8-end-24.png" id="7_n2l5p"]
+[ext_resource type="Texture2D" uid="uid://bfjwvfebmxxr2" path="res://assets/sprites/(temp) visual novel icons/icons8-invisible-30.png" id="8_tq1jr"]
+[ext_resource type="Texture2D" uid="uid://dykrbpn2lmr12" path="res://assets/sprites/(temp) visual novel icons/icons8-reload-50.png" id="9_wveuv"]
+[ext_resource type="Texture2D" uid="uid://bpe0nw3woei3e" path="res://assets/sprites/(temp) visual novel icons/icons8-save-50.png" id="10_yds3k"]
+[ext_resource type="Texture2D" uid="uid://cwwx7h7mjkgjg" path="res://assets/sprites/(temp) visual novel icons/icons8-setting-50.png" id="11_8nh46"]
+[ext_resource type="Texture2D" uid="uid://bl2bnijfwpil6" path="res://assets/sprites/(temp) visual novel icons/icons8-arrow-30.png" id="12_nc0cm"]
+[ext_resource type="FontFile" uid="uid://cglejwueo2ec7" path="res://assets/Fonts/Beholden-Medium.ttf" id="13_i6hbw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jxohh"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_4nxsp")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Scene" type="Node2D" parent="SubViewportContainer/SubViewport"]
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Scene"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 339.0
+offset_top = 448.0
+offset_right = 1512.0
+offset_bottom = 667.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 160
+text = "THIS IS A GAME"
+
+[node name="Dialogue" parent="SubViewportContainer/SubViewport/Scene" instance=ExtResource("2_ugm23")]
+
+[node name="Icon_Settings" type="CanvasLayer" parent="SubViewportContainer/SubViewport/Scene"]
+script = ExtResource("3_nuuro")
+
+[node name="Sprites" type="Node2D" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings"]
+
+[node name="bookmark" type="Sprite2D" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Sprites"]
+modulate = Color(0.12504253, 0.12504253, 0.12504253, 0.15686275)
+position = Vector2(1774.4376, 479.99997)
+scale = Vector2(12.713541, 55.16666)
+texture = ExtResource("4_i6hbw")
+
+[node name="Auto" type="Sprite2D" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Sprites"]
+position = Vector2(1773, 230)
+scale = Vector2(2.5493588, 2.1727703)
+texture = ExtResource("5_ux066")
+
+[node name="History" type="Sprite2D" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Sprites"]
+position = Vector2(1779.5793, 349.47137)
+scale = Vector2(2.1743584, 2.1415205)
+texture = ExtResource("6_kj106")
+
+[node name="Skip" type="Sprite2D" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Sprites"]
+position = Vector2(1779, 127.99999)
+scale = Vector2(6.2330074, 7.401489)
+texture = ExtResource("7_n2l5p")
+
+[node name="Hide" type="Sprite2D" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Sprites"]
+position = Vector2(1779, 484.99997)
+scale = Vector2(3.928848, 3.7348228)
+texture = ExtResource("8_tq1jr")
+
+[node name="Reload" type="Sprite2D" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Sprites"]
+position = Vector2(1784, 718.00006)
+scale = Vector2(2.0243573, 2.0896456)
+texture = ExtResource("9_wveuv")
+
+[node name="Save" type="Sprite2D" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Sprites"]
+position = Vector2(1773, 599)
+scale = Vector2(2.2043579, 2.0896456)
+texture = ExtResource("10_yds3k")
+
+[node name="Setting" type="Sprite2D" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Sprites"]
+position = Vector2(1782.9999, 856)
+scale = Vector2(2.3243554, 2.329646)
+texture = ExtResource("11_8nh46")
+
+[node name="Arrow" type="Sprite2D" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Sprites"]
+position = Vector2(1770, 961)
+scale = Vector2(3.391018, 5.3029785)
+texture = ExtResource("12_nc0cm")
+
+[node name="Buttons" type="Node2D" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings"]
+
+[node name="Skip" type="Button" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons"]
+offset_left = 1700.0
+offset_top = 75.0
+offset_right = 1848.0
+offset_bottom = 179.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jxohh")
+icon = ExtResource("12_nc0cm")
+icon_alignment = 1
+
+[node name="Auto" type="Button" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons"]
+offset_left = 1703.0
+offset_top = 181.0
+offset_right = 1851.0
+offset_bottom = 285.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jxohh")
+toggle_mode = true
+icon = ExtResource("12_nc0cm")
+icon_alignment = 1
+
+[node name="History" type="Button" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons"]
+offset_left = 1703.0
+offset_top = 299.0
+offset_right = 1851.0
+offset_bottom = 403.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jxohh")
+icon = ExtResource("12_nc0cm")
+icon_alignment = 1
+
+[node name="Hide" type="Button" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons"]
+offset_left = 1703.0
+offset_top = 431.0
+offset_right = 1851.0
+offset_bottom = 535.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jxohh")
+icon = ExtResource("12_nc0cm")
+icon_alignment = 1
+
+[node name="Save" type="Button" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons"]
+offset_left = 1703.0
+offset_top = 549.0
+offset_right = 1851.0
+offset_bottom = 653.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jxohh")
+icon = ExtResource("12_nc0cm")
+icon_alignment = 1
+
+[node name="Load" type="Button" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons"]
+offset_left = 1703.0
+offset_top = 667.0
+offset_right = 1851.0
+offset_bottom = 771.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jxohh")
+icon = ExtResource("12_nc0cm")
+icon_alignment = 1
+
+[node name="Setting" type="Button" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons"]
+offset_left = 1703.0
+offset_top = 802.0
+offset_right = 1851.0
+offset_bottom = 906.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jxohh")
+icon = ExtResource("12_nc0cm")
+icon_alignment = 1
+
+[node name="Arrow" type="Button" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons"]
+offset_left = 1703.0
+offset_top = 917.0
+offset_right = 1851.0
+offset_bottom = 1021.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jxohh")
+icon = ExtResource("12_nc0cm")
+icon_alignment = 1
+
+[node name="History_panel" type="Node2D" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings"]
+visible = false
+
+[node name="Panel" type="Panel" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/History_panel"]
+offset_right = 1965.0
+offset_bottom = 1116.0
+
+[node name="ColorRect" type="ColorRect" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/History_panel"]
+offset_left = 474.0
+offset_top = 54.0
+offset_right = 1474.0
+offset_bottom = 1021.0
+color = Color(0.5019608, 1, 1, 0.42745098)
+
+[node name="TextEdit" type="TextEdit" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/History_panel"]
+visible = false
+offset_left = 490.0
+offset_top = 73.0
+offset_right = 1460.0
+offset_bottom = 1003.0
+theme_override_font_sizes/font_size = 37
+placeholder_text = "sdfsdkljfh;sldflsd;lkfh;lksdhflksh;dlkflskdhf;sdh;lkfh asdasdasdasdasdasd
+sdfsdkljfh;sldflsd;lkfh;lksdhflksh;dlkflskdhf;sdh;lkfh asdasdasdasdasdasd
+sdfsdkljfh;sldflsd;lkfh;lksdhflksh;dlkflskdhf;sdh;lkfh asdasdasdasdasdasd
+sdfsdkljfh;sldflsd;lkfh;lksdhflksh;dlkflskdhf;sdh;lkfh asdasdasdasdasdasd
+sdfsdkljfh;sldflsd;lkfh;lksdhflksh;dlkflskdhf;sdh;lkfh asdasdasdasdasdasd
+sdfsdkljfh;sldflsd;lkfh;lksdhflksh;dlkflskdhf;sdh;lkfh asdasdasdasdasdasd
+sdfsdkljfh;sldflsd;lkfh;lksdhflksh;dlkflskdhf;sdh;lkfh asdasdasdasdasdasd
+sdfsdkljfh;sldflsd;lkfh;lksdhflksh;dlkflskdhf;sdh;lkfh asdasdasdasdasdasd
+sdfsdkljfh;sldflsd;lkfh;lksdhflksh;dlkflskdhf;sdh;lkfh asdasdasdasdasdasd
+sdfsdkljfh;sldflsd;lkfh;lksdhflksh;dlkflskdhf;sdh;lkfh asdasdasdasdasdasd"
+editable = false
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="X" type="Button" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/History_panel"]
+offset_left = 1527.0
+offset_top = 64.0
+offset_right = 1792.0
+offset_bottom = 244.0
+theme_override_font_sizes/font_size = 47
+text = "X"
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/History_panel"]
+offset_left = 163.0
+offset_top = 60.0
+offset_right = 415.0
+offset_bottom = 152.0
+theme_override_font_sizes/font_size = 67
+text = "History:"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/History_panel"]
+visible = false
+offset_left = 484.0
+offset_top = 77.0
+offset_right = 1460.0
+offset_bottom = 1008.0
+horizontal_scroll_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/History_panel/ScrollContainer"]
+custom_minimum_size = Vector2(978.735, 0)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 37
+bbcode_enabled = true
+text = "dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings/History_panel"]
+custom_minimum_size = Vector2(978.735, 0)
+offset_left = 484.0
+offset_top = 63.0
+offset_right = 1462.735
+offset_bottom = 1012.0
+theme_override_fonts/normal_font = ExtResource("13_i6hbw")
+theme_override_font_sizes/normal_font_size = 37
+bbcode_enabled = true
+text = "dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+dsf
+1"
+scroll_following_visible_characters = true
+
+[node name="Auto_speed" type="Timer" parent="SubViewportContainer/SubViewport/Scene/Icon_Settings"]
+wait_time = 3.0
+
+[node name="PauseMenu_InGame" parent="." instance=ExtResource("2_p7xw7")]
+visible = false
+
+[connection signal="button_down" from="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons/Skip" to="SubViewportContainer/SubViewport/Scene/Icon_Settings" method="_on_skip_button_down"]
+[connection signal="button_up" from="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons/Skip" to="SubViewportContainer/SubViewport/Scene/Icon_Settings" method="_on_skip_button_up"]
+[connection signal="toggled" from="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons/Auto" to="SubViewportContainer/SubViewport/Scene/Icon_Settings" method="_on_auto_toggled"]
+[connection signal="pressed" from="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons/History" to="SubViewportContainer/SubViewport/Scene/Icon_Settings" method="_on_history_pressed"]
+[connection signal="pressed" from="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons/Hide" to="SubViewportContainer/SubViewport/Scene/Icon_Settings" method="_on_hide_pressed"]
+[connection signal="pressed" from="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons/Save" to="SubViewportContainer/SubViewport/Scene/Icon_Settings" method="_on_save_pressed"]
+[connection signal="pressed" from="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons/Load" to="SubViewportContainer/SubViewport/Scene/Icon_Settings" method="_on_load_pressed"]
+[connection signal="pressed" from="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons/Setting" to="SubViewportContainer/SubViewport/Scene/Icon_Settings" method="_on_setting_pressed"]
+[connection signal="pressed" from="SubViewportContainer/SubViewport/Scene/Icon_Settings/Buttons/Arrow" to="SubViewportContainer/SubViewport/Scene/Icon_Settings" method="_on_arrow_pressed"]
+[connection signal="pressed" from="SubViewportContainer/SubViewport/Scene/Icon_Settings/History_panel/X" to="SubViewportContainer/SubViewport/Scene/Icon_Settings" method="_on_history_x_pressed"]

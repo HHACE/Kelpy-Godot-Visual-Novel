@@ -1,0 +1,286 @@
+[gd_scene load_steps=13 format=3 uid="uid://cvpi4eq2uhjfx"]
+
+[ext_resource type="Script" uid="uid://drfu05tto4gls" path="res://scene/UI/Dialogue/dialogue.gd" id="1_hoxo3"]
+[ext_resource type="Texture2D" uid="uid://cf3acei12geoq" path="res://icon.svg" id="1_kp46k"]
+[ext_resource type="Script" uid="uid://c31vt7wm3t7mq" path="res://scene/UI/Dialogue/dialogue_characters.gd" id="2_q2h7b"]
+[ext_resource type="Script" uid="uid://cpc7qgixoy8xw" path="res://scene/UI/Dialogue/dialogue_box.gd" id="4_iq77p"]
+[ext_resource type="Script" uid="uid://bc62agcl5kscd" path="res://scene/UI/Dialogue/choice_box_container.gd" id="5_js5gt"]
+[ext_resource type="FontFile" uid="uid://cglejwueo2ec7" path="res://assets/Fonts/Beholden-Medium.ttf" id="5_t63d4"]
+[ext_resource type="FontFile" uid="uid://crkj73e8yyqi2" path="res://assets/Fonts/Beholden-Bold.ttf" id="6_vliws"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_js5gt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kp46k")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oi3j2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kp46k")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pf1yn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kp46k")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t63d4"]
+animations = [{
+"frames": [],
+"loop": false,
+"name": &"Bunny_girl_1",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"Bunny_girl_2",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"Cat_girl_1",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"Mint",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ihu78"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kp46k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_kp46k")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[node name="Dialogue" type="CanvasLayer"]
+script = ExtResource("1_hoxo3")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BGs" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="BGs"]
+modulate = Color(1, 1, 1, 0.15686275)
+position = Vector2(964.5, 517.5)
+scale = Vector2(16.070313, 9.0859375)
+texture = ExtResource("1_kp46k")
+
+[node name="Characters" type="Node2D" parent="."]
+script = ExtResource("2_q2h7b")
+
+[node name="BGs" type="AnimatedSprite2D" parent="Characters"]
+position = Vector2(960, 540)
+scale = Vector2(15.000001, 8.4375)
+sprite_frames = SubResource("SpriteFrames_js5gt")
+
+[node name="Salvia" type="AnimatedSprite2D" parent="Characters"]
+position = Vector2(-353, 311)
+sprite_frames = SubResource("SpriteFrames_oi3j2")
+autoplay = "default"
+
+[node name="Camellia" type="AnimatedSprite2D" parent="Characters"]
+position = Vector2(-102, 342)
+sprite_frames = SubResource("SpriteFrames_pf1yn")
+autoplay = "default"
+
+[node name="NPC1" type="AnimatedSprite2D" parent="Characters"]
+sprite_frames = SubResource("SpriteFrames_t63d4")
+autoplay = "default"
+
+[node name="character_test" type="AnimatedSprite2D" parent="Characters"]
+position = Vector2(350, -92)
+sprite_frames = SubResource("SpriteFrames_ihu78")
+autoplay = "default"
+frame_progress = 0.84512854
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Characters"]
+
+[node name="DialogueBox" type="Node2D" parent="."]
+script = ExtResource("4_iq77p")
+
+[node name="Box" type="Node2D" parent="DialogueBox"]
+
+[node name="outline" type="ColorRect" parent="DialogueBox/Box"]
+offset_left = 103.0
+offset_top = 705.0
+offset_right = 2484.9443
+offset_bottom = 1093.0952
+scale = Vector2(0.72, 0.84000003)
+color = Color(0, 0, 0, 1)
+
+[node name="fill" type="ColorRect" parent="DialogueBox/Box"]
+modulate = Color(1, 1, 1, 0.22745098)
+offset_left = 133.0
+offset_top = 730.0
+offset_right = 2445.5
+offset_bottom = 1064.5238
+scale = Vector2(0.72, 0.84000003)
+
+[node name="fill2" type="ColorRect" parent="DialogueBox/Box"]
+modulate = Color(1, 1, 1, 0.22745098)
+offset_left = 163.00002
+offset_top = 748.0
+offset_right = 2371.3333
+offset_bottom = 1039.6666
+scale = Vector2(0.72, 0.84000003)
+color = Color(1, 1, 1, 0.54509807)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogueBox"]
+offset_left = 164.0
+offset_top = 750.0
+offset_right = 1753.0
+offset_bottom = 995.0
+theme_override_fonts/normal_font = ExtResource("5_t63d4")
+theme_override_font_sizes/normal_font_size = 47
+bbcode_enabled = true
+text = "A ...and… asdasdasdasdasdasdasdasdas asdasdasdasdasdasdasdasdas asdasdasdasdasdasdasdasdas  asdasdasdasdasdasdasdasdas asdasdasdasdasdasdasdasdasasdasdasdasdasdasdasdasdas asdasdasdasdasdasdasdasdas"
+scroll_active = false
+scroll_following_visible_characters = true
+visible_characters_behavior = 3
+
+[node name="CPS" type="Timer" parent="DialogueBox"]
+
+[node name="NameBox" type="Node2D" parent="."]
+
+[node name="Box" type="Node2D" parent="NameBox"]
+
+[node name="outline" type="ColorRect" parent="NameBox/Box"]
+offset_left = 105.0
+offset_top = 609.00006
+offset_right = 771.6666
+offset_bottom = 709.00006
+scale = Vector2(0.72, 0.84000003)
+color = Color(0, 0, 0, 1)
+
+[node name="fill" type="ColorRect" parent="NameBox/Box"]
+offset_left = 116.00001
+offset_top = 617.0
+offset_right = 753.49994
+offset_bottom = 696.7619
+scale = Vector2(0.72, 0.84000003)
+color = Color(1, 1, 1, 0.22352941)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NameBox"]
+offset_left = 124.0
+offset_top = 622.0
+offset_right = 565.0
+offset_bottom = 680.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("5_t63d4")
+theme_override_fonts/bold_font = ExtResource("6_vliws")
+theme_override_font_sizes/normal_font_size = 37
+theme_override_font_sizes/bold_font_size = 37
+bbcode_enabled = true
+text = "adasd [b]adasd[/b]
+adasd"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChoiceBoxContainer" type="Node2D" parent="."]
+script = ExtResource("5_js5gt")
+
+[node name="CenterContainer" type="CenterContainer" parent="ChoiceBoxContainer"]
+offset_right = 1920.0
+offset_bottom = 776.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="ChoiceBoxContainer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Button" type="Button" parent="ChoiceBoxContainer/CenterContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 37
+text = "asdasdasdasdasdasdasdaaasdasdasdasdasdasdsadasdasdasdasd  asdasdasdasdasdasdasdasdasd
+
+asdasdasdasdasdasd"
+
+[node name="Button2" type="Button" parent="ChoiceBoxContainer/CenterContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+text = "asdasdasdasdasdasdasdas"
+
+[node name="Button3" type="Button" parent="ChoiceBoxContainer/CenterContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 37
+text = "asdasdasdasdasdasdasdas"
+
+[node name="Button4" type="Button" parent="ChoiceBoxContainer/CenterContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 37
+text = "asdasdasdasdasdasdasdas"
+
+[node name="Skip_speed" type="Timer" parent="."]
+wait_time = 0.15

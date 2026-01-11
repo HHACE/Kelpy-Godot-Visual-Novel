@@ -1,0 +1,209 @@
+[gd_scene load_steps=10 format=3 uid="uid://cwlfr3lmt55qk"]
+
+[ext_resource type="Texture2D" uid="uid://cf3acei12geoq" path="res://icon.svg" id="1_04b44"]
+[ext_resource type="Script" uid="uid://d30o4xj76o0t2" path="res://scene/UI/Menus/pause_menu_in_game.gd" id="1_xensj"]
+[ext_resource type="PackedScene" uid="uid://c5i8fnf3m4w78" path="res://scene/UI/Menus/menu_setting.tscn" id="2_xensj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ijoyg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_04b44")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rcs1k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_04b44")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xensj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_04b44")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r2i8n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_04b44")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0d124"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_04b44")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ikaqb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_04b44")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[node name="PauseMenu_InGame" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_xensj")
+
+[node name="BG" type="AnimatedSprite2D" parent="."]
+position = Vector2(623.00006, 372.00003)
+scale = Vector2(10.203125, 6.671875)
+sprite_frames = SubResource("SpriteFrames_ijoyg")
+
+[node name="Title" type="Label" parent="."]
+z_index = 1
+offset_left = 434.0
+offset_top = 76.0
+offset_right = 813.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 82
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="Node2D" parent="."]
+
+[node name="SelectIcon" type="Node2D" parent="Options"]
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/SelectIcon"]
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_rcs1k")
+autoplay = "default"
+
+[node name="Buttons" type="Node2D" parent="Options"]
+
+[node name="Resume" type="Button" parent="Options/Buttons"]
+offset_left = 468.0
+offset_top = 198.0
+offset_right = 766.0
+offset_bottom = 292.0
+text = "Resume"
+
+[node name="Restart" type="Button" parent="Options/Buttons"]
+offset_left = 471.0
+offset_top = 319.0
+offset_right = 769.0
+offset_bottom = 413.0
+text = "Restart
+"
+
+[node name="Setting" type="Button" parent="Options/Buttons"]
+offset_left = 470.0
+offset_top = 441.0
+offset_right = 768.0
+offset_bottom = 535.0
+text = "Setting
+"
+
+[node name="Main Menu" type="Button" parent="Options/Buttons"]
+offset_left = 466.0
+offset_top = 577.0
+offset_right = 764.0
+offset_bottom = 671.0
+text = "Main Menu
+"
+
+[node name="Sprites" type="Node2D" parent="Options"]
+visible = false
+z_index = 1
+
+[node name="Resume" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(614.00006, 244.99998)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_xensj")
+autoplay = "default"
+
+[node name="Restart" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(614, 363)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_r2i8n")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Setting" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(616.00006, 486)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_0d124")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Main Menu" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(615, 624)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_ikaqb")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Menus" type="Node2D" parent="Options"]
+z_index = 1
+
+[node name="Setting" parent="Options/Menus" instance=ExtResource("2_xensj")]
+visible = false
+
+[connection signal="pressed" from="Options/Buttons/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Options/Buttons/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Options/Buttons/Setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="Options/Buttons/Main Menu" to="." method="_on_main_menu_pressed"]

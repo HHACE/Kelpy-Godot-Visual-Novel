@@ -1,0 +1,4043 @@
+[gd_scene load_steps=43 format=3 uid="uid://c75wvx7spsd1m"]
+
+[ext_resource type="Script" uid="uid://skh8ia5g4owq" path="res://scene/UI/Menus/pause_menu_in_game_dialogue.gd" id="1_6r8xb"]
+[ext_resource type="Texture2D" uid="uid://cf3acei12geoq" path="res://icon.svg" id="2_fu1ex"]
+[ext_resource type="Script" uid="uid://cpu8uqh1e6vii" path="res://scene/UI/Menus/menu_save_load_inDialogue.gd" id="3_6r8xb"]
+[ext_resource type="Script" uid="uid://dv5ftbsvygev2" path="res://scene/UI/Menus/menu_setting_inDialogue.gd" id="3_q1nlo"]
+[ext_resource type="Script" uid="uid://cf3s44nnf3ptm" path="res://scene/UI/Menus/menu_setting_control_inDialogue.gd" id="4_q1nlo"]
+[ext_resource type="Script" uid="uid://bbuh2fcusho8" path="res://scene/UI/Menus/menu_setting_audio_inDialogue.gd" id="5_oh74n"]
+[ext_resource type="Script" uid="uid://dxxun6wr2w3qa" path="res://scene/UI/Menus/menu_setting_graphic_inDialogue.gd" id="6_6k35r"]
+[ext_resource type="FontFile" uid="uid://cglejwueo2ec7" path="res://assets/Fonts/Beholden-Medium.ttf" id="8_6k35r"]
+[ext_resource type="Script" uid="uid://b7pws3p2f0toh" path="res://scene/UI/Menus/dialogue_setting_inDialogue.gd" id="8_oh74n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_04b44"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rcs1k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xensj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r2i8n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0d124"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ikaqb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_54s7c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q1nlo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oh74n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6k35r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ytlfu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3xt1m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5g7gu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pnr4p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_igp7c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_40wkk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c3pek"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_twokt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"mute",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5rmxn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"mute",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5lntp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"mute",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r3nrl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"mute",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wwqc1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4la42"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_52b6w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2vhhw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t3sue"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2k7to"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vcrgc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fu1ex")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q1nlo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oh74n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6k35r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ytlfu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jv028"]
+
+[node name="PauseMenu_InGame_Dialogue" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_6r8xb")
+
+[node name="BG" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(14.999999, 8.4375)
+sprite_frames = SubResource("SpriteFrames_04b44")
+
+[node name="Title" type="Label" parent="."]
+z_index = 1
+offset_left = 109.0
+offset_top = 121.0
+offset_right = 488.0
+offset_bottom = 237.0
+theme_override_font_sizes/font_size = 82
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="Node2D" parent="."]
+
+[node name="SelectIcon" type="Node2D" parent="Options"]
+visible = false
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/SelectIcon"]
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_rcs1k")
+autoplay = "default"
+
+[node name="Buttons" type="Node2D" parent="Options"]
+
+[node name="Resume" type="Button" parent="Options/Buttons"]
+offset_left = 85.0
+offset_top = 504.0
+offset_right = 512.0
+offset_bottom = 574.0
+theme_override_font_sizes/font_size = 38
+text = "Resume"
+
+[node name="Restart" type="Button" parent="Options/Buttons"]
+offset_left = 85.0
+offset_top = 585.0
+offset_right = 512.0
+offset_bottom = 655.0
+theme_override_font_sizes/font_size = 38
+text = "Restart
+"
+
+[node name="Setting" type="Button" parent="Options/Buttons"]
+offset_left = 85.0
+offset_top = 849.0
+offset_right = 512.0
+offset_bottom = 919.0
+theme_override_font_sizes/font_size = 38
+text = "Setting
+"
+
+[node name="Main Menu" type="Button" parent="Options/Buttons"]
+offset_left = 87.0
+offset_top = 939.0
+offset_right = 514.0
+offset_bottom = 1009.0
+theme_override_font_sizes/font_size = 38
+text = "Main Menu
+"
+
+[node name="Save" type="Button" parent="Options/Buttons"]
+offset_left = 85.0
+offset_top = 673.0
+offset_right = 512.0
+offset_bottom = 743.0
+theme_override_font_sizes/font_size = 38
+text = "Save"
+
+[node name="Load" type="Button" parent="Options/Buttons"]
+offset_left = 87.0
+offset_top = 757.0
+offset_right = 514.0
+offset_bottom = 827.0
+theme_override_font_sizes/font_size = 38
+text = "Load
+"
+
+[node name="History" type="Button" parent="Options/Buttons"]
+visible = false
+offset_left = 85.0
+offset_top = 422.0
+offset_right = 512.0
+offset_bottom = 492.0
+theme_override_font_sizes/font_size = 38
+text = "History"
+
+[node name="Sprites" type="Node2D" parent="Options"]
+visible = false
+z_index = 1
+
+[node name="Resume" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(614.00006, 244.99998)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_xensj")
+autoplay = "default"
+
+[node name="Restart" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(614, 363)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_r2i8n")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Setting" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(616.00006, 486)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_0d124")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Main Menu" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(615, 624)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_ikaqb")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Menus" type="Node2D" parent="Options"]
+z_index = 1
+
+[node name="History_inDialogue" type="Node2D" parent="Options/Menus"]
+visible = false
+
+[node name="Setting_inDialogue" type="Node2D" parent="Options/Menus"]
+script = ExtResource("3_q1nlo")
+
+[node name="BG" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue"]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(14.999999, 8.4375)
+sprite_frames = SubResource("SpriteFrames_54s7c")
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue"]
+visible = false
+offset_left = 1015.0
+offset_top = 135.0
+offset_right = 1412.0
+offset_bottom = 248.0
+theme_override_font_sizes/font_size = 82
+text = "Setting"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="Node2D" parent="Options/Menus/Setting_inDialogue"]
+
+[node name="SelectIcon" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options"]
+visible = false
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/SelectIcon"]
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_q1nlo")
+autoplay = "default"
+
+[node name="Buttons" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options"]
+visible = false
+
+[node name="Control" type="Button" parent="Options/Menus/Setting_inDialogue/Options/Buttons"]
+offset_left = 986.0
+offset_top = 321.0
+offset_right = 1413.0
+offset_bottom = 441.0
+theme_override_font_sizes/font_size = 38
+text = "Control"
+
+[node name="Audio" type="Button" parent="Options/Menus/Setting_inDialogue/Options/Buttons"]
+offset_left = 990.0
+offset_top = 679.0
+offset_right = 1417.0
+offset_bottom = 799.0
+theme_override_font_sizes/font_size = 38
+text = "Audio
+"
+
+[node name="Graphic" type="Button" parent="Options/Menus/Setting_inDialogue/Options/Buttons"]
+offset_left = 989.0
+offset_top = 852.0
+offset_right = 1416.0
+offset_bottom = 972.0
+theme_override_font_sizes/font_size = 38
+text = "Graphic
+"
+
+[node name="Back" type="Button" parent="Options/Menus/Setting_inDialogue/Options/Buttons"]
+visible = false
+offset_left = 985.0
+offset_top = 849.0
+offset_right = 1412.0
+offset_bottom = 969.0
+theme_override_font_sizes/font_size = 38
+text = "Back
+"
+
+[node name="Dialogue_Text" type="Button" parent="Options/Menus/Setting_inDialogue/Options/Buttons"]
+offset_left = 987.0
+offset_top = 498.0
+offset_right = 1414.0
+offset_bottom = 618.0
+theme_override_font_sizes/font_size = 38
+text = "Dialogue Text
+"
+
+[node name="Sprites" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options"]
+visible = false
+z_index = 1
+
+[node name="Control" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Sprites"]
+position = Vector2(614.00006, 244.99998)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_oh74n")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Audio" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Sprites"]
+position = Vector2(614, 363)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_6k35r")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Graphic" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Sprites"]
+position = Vector2(616.00006, 486)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_ytlfu")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Back" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Sprites"]
+position = Vector2(615, 624)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_3xt1m")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Menus" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options"]
+z_index = 1
+
+[node name="Control_inDialogue" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus"]
+script = ExtResource("4_q1nlo")
+
+[node name="BG" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue"]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(14.999999, 8.4375)
+sprite_frames = SubResource("SpriteFrames_5g7gu")
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue"]
+offset_left = 1015.0
+offset_top = 68.0
+offset_right = 1412.0
+offset_bottom = 181.0
+theme_override_font_sizes/font_size = 82
+text = "Control"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue"]
+
+[node name="SelectIcon" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options"]
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/SelectIcon"]
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_pnr4p")
+autoplay = "default"
+
+[node name="Buttons" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options"]
+
+[node name="Back" type="Button" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons"]
+offset_left = 984.0
+offset_top = 851.0
+offset_right = 1411.0
+offset_bottom = 971.0
+theme_override_font_sizes/font_size = 38
+text = "Back
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Key1" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons"]
+visible = false
+
+[node name="Action" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key1"]
+offset_left = 838.0
+offset_top = 318.0
+offset_right = 1171.0
+offset_bottom = 370.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key1/Action"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Key" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key1"]
+offset_left = 1248.0
+offset_top = 318.0
+offset_right = 1581.0
+offset_bottom = 370.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key1/Key"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Key2" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons"]
+visible = false
+
+[node name="Action" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key2"]
+offset_left = 838.0
+offset_top = 383.0
+offset_right = 1171.0
+offset_bottom = 435.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key2/Action"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Key" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key2"]
+offset_left = 1248.0
+offset_top = 383.0
+offset_right = 1581.0
+offset_bottom = 435.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key2/Key"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Key3" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons"]
+visible = false
+
+[node name="Action" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key3"]
+offset_left = 838.0
+offset_top = 448.0
+offset_right = 1171.0
+offset_bottom = 500.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key3/Action"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Key" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key3"]
+offset_left = 1248.0
+offset_top = 448.0
+offset_right = 1581.0
+offset_bottom = 500.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key3/Key"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Key4" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons"]
+visible = false
+
+[node name="Action" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key4"]
+offset_left = 838.0
+offset_top = 513.0
+offset_right = 1171.0
+offset_bottom = 565.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key4/Action"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Key" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key4"]
+offset_left = 1248.0
+offset_top = 513.0
+offset_right = 1581.0
+offset_bottom = 565.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key4/Key"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Key5" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons"]
+visible = false
+
+[node name="Action" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key5"]
+offset_left = 838.0
+offset_top = 578.0
+offset_right = 1171.0
+offset_bottom = 630.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key5/Action"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Key" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key5"]
+offset_left = 1248.0
+offset_top = 578.0
+offset_right = 1581.0
+offset_bottom = 630.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key5/Key"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Key6" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons"]
+visible = false
+
+[node name="Action" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key6"]
+offset_left = 838.0
+offset_top = 643.0
+offset_right = 1171.0
+offset_bottom = 695.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key6/Action"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Key" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key6"]
+offset_left = 1248.0
+offset_top = 643.0
+offset_right = 1581.0
+offset_bottom = 695.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key6/Key"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Key7" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons"]
+visible = false
+
+[node name="Action" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key7"]
+offset_left = 838.0
+offset_top = 708.0
+offset_right = 1171.0
+offset_bottom = 760.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key7/Action"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Key" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key7"]
+offset_left = 1248.0
+offset_top = 708.0
+offset_right = 1581.0
+offset_bottom = 760.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Key7/Key"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "KEY 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons"]
+offset_left = 689.0
+offset_top = 186.0
+offset_right = 1746.0
+offset_bottom = 842.0
+size_flags_vertical = 3
+draw_focus_border = true
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+
+[node name="Label1" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(1000, 121)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 43
+text = "UI controls
+------------------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 370)
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="key1" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key1/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key2" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key3" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key3/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key4" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key4/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key5" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key5/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key6" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key6/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key7" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key7/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key8" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer1/key8/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="key1" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/key1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/key1/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key2" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/key2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/key2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key3" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/key3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/key3/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key4" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/key4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/key4/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key5" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/key5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2/key5/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key1" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/key1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/key1/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key2" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/key2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer/key2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Label2" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+text = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+
+[node name="Label3" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+text = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+
+[node name="Label2" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 121)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 43
+text = "Dialogue controls
+------------------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 510)
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="key1" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key1/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key2" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key3" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key3/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key4" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key4/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key5" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key5/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key6" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key6/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key7" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key7/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key8" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer1/key8/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="key1" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key1/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Confirm "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key2" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key3" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key3/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Hide dialogue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key4" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key4/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Display history"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key5" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key5/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Skip Dialogue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key6" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key6/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Save file screen"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key7" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key7/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Load file screen"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key8" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/key8/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Automatic advance dialogue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key1" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/key1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/key1/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key2" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/key2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2/key2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2"]
+visible = false
+layout_mode = 2
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Label2" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2"]
+visible = false
+layout_mode = 2
+text = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+
+[node name="Label3" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer2"]
+visible = false
+layout_mode = 2
+text = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+
+[node name="Label3" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 121)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 43
+text = "Cafe game controls
+------------------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 460)
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="key1" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key1/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key2" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key3" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key3/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key4" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key4/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key5" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key5/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key6" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key6/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key7" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer1/key7/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="key1" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key1/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Move forward"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key2" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Move backward"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key3" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key3/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Move left"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key4" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key4/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Move right"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key5" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key5/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key6" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key6/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Jump"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key7" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/VBoxContainer2/key7/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Sprint toggle"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key1" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/key1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/key1/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key2" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/key2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3/key2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3"]
+visible = false
+layout_mode = 2
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Label2" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3"]
+visible = false
+layout_mode = 2
+text = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+
+[node name="Label3" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer3"]
+visible = false
+layout_mode = 2
+text = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+
+[node name="Label4" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 121)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 43
+text = "Office game controls
+------------------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 370)
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="VBoxContainer1" type="VBoxContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="key1" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1/key1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1/key1/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key2" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1/key2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1/key2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key3" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1/key3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1/key3/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key4" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1/key4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1/key4/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key5" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1/key5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer1/key5/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="key1" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2/key1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2/key1/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key2" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2/key2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2/key2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key3" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2/key3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2/key3/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key4" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2/key4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2/key4/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key5" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2/key5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/VBoxContainer2/key5/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key1" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/key1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/key1/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="key2" type="Control" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/key2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -237.0
+offset_top = -27.0
+offset_right = 237.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4/key2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Key 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4"]
+visible = false
+layout_mode = 2
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Label2" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4"]
+visible = false
+layout_mode = 2
+text = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+
+[node name="Label3" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/ScrollContainer/VBoxContainer/HBoxContainer4"]
+visible = false
+layout_mode = 2
+text = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+
+[node name="Sprites" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options"]
+visible = false
+z_index = 1
+
+[node name="Back" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Sprites"]
+position = Vector2(615, 624)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_igp7c")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Menus" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options"]
+
+[node name="Message1" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Menus"]
+visible = false
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Menus/Message1"]
+offset_left = -28.0
+offset_top = -25.0
+offset_right = 1295.0
+offset_bottom = 731.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Menus/Message1"]
+offset_top = 282.0
+offset_right = 1276.0
+offset_bottom = 380.0
+theme_override_font_sizes/font_size = 56
+text = "Press a KEY to map it"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Audio_inDialogue" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus"]
+visible = false
+script = ExtResource("5_oh74n")
+
+[node name="BG" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue"]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(14.999999, 8.4375)
+sprite_frames = SubResource("SpriteFrames_40wkk")
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue"]
+offset_left = 1020.0
+offset_top = 142.0
+offset_right = 1417.0
+offset_bottom = 255.0
+theme_override_font_sizes/font_size = 82
+text = "Audio"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue"]
+
+[node name="SelectIcon" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options"]
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/SelectIcon"]
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_c3pek")
+autoplay = "default"
+
+[node name="Buttons" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options"]
+
+[node name="Bus_master" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons"]
+
+[node name="ProgressBar" type="HSlider" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons/Bus_master"]
+offset_left = 874.0
+offset_top = 275.0
+offset_right = 1302.0
+offset_bottom = 316.0
+scale = Vector2(2, 2)
+
+[node name="Bus_music" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons"]
+
+[node name="ProgressBar" type="HSlider" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons/Bus_music"]
+offset_left = 873.0
+offset_top = 406.0
+offset_right = 1301.0
+offset_bottom = 447.0
+scale = Vector2(2, 2)
+
+[node name="Bus_efx" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons"]
+
+[node name="ProgressBar" type="HSlider" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons/Bus_efx"]
+offset_left = 874.0
+offset_top = 530.0
+offset_right = 1302.0
+offset_bottom = 571.0
+scale = Vector2(2, 2)
+
+[node name="Bus_voice" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons"]
+
+[node name="ProgressBar" type="HSlider" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons/Bus_voice"]
+offset_left = 874.0
+offset_top = 675.0
+offset_right = 1302.0
+offset_bottom = 716.0
+scale = Vector2(2, 2)
+
+[node name="Back" type="Button" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons"]
+offset_left = 1012.0
+offset_top = 837.0
+offset_right = 1439.0
+offset_bottom = 957.0
+theme_override_font_sizes/font_size = 38
+text = "Back
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprites" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options"]
+z_index = 1
+
+[node name="Bus_master" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Sprites"]
+position = Vector2(763, 315)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_twokt")
+autoplay = "default"
+
+[node name="Bus_music" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Sprites"]
+position = Vector2(763, 446)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_5rmxn")
+autoplay = "default"
+
+[node name="Bus_efx" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Sprites"]
+position = Vector2(763, 570)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_5lntp")
+autoplay = "default"
+
+[node name="Bus_voice" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Sprites"]
+position = Vector2(763, 715)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_r3nrl")
+autoplay = "default"
+
+[node name="Back" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Sprites"]
+visible = false
+position = Vector2(615, 624)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_wwqc1")
+autoplay = "default"
+
+[node name="Graphic_inDialogue" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus"]
+visible = false
+script = ExtResource("6_6k35r")
+
+[node name="BG" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue"]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(14.999999, 8.4375)
+sprite_frames = SubResource("SpriteFrames_4la42")
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue"]
+offset_left = 1015.0
+offset_top = 135.0
+offset_right = 1412.0
+offset_bottom = 248.0
+theme_override_font_sizes/font_size = 82
+text = "Graphic"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue"]
+
+[node name="SelectIcon" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options"]
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/SelectIcon"]
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_52b6w")
+autoplay = "default"
+
+[node name="Buttons" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options"]
+
+[node name="Back" type="Button" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons"]
+offset_left = 1020.0
+offset_top = 837.0
+offset_right = 1447.0
+offset_bottom = 957.0
+theme_override_font_sizes/font_size = 38
+text = "Back
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Box Resolution" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons"]
+
+[node name="OptionButton" type="OptionButton" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons/Box Resolution"]
+offset_left = 1197.0
+offset_top = 319.0
+offset_right = 1590.0
+offset_bottom = 400.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons/Box Resolution"]
+offset_left = 869.0
+offset_top = 319.0
+offset_right = 1151.0
+offset_bottom = 396.0
+theme_override_font_sizes/font_size = 52
+text = "Resolution:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Box Window Mode" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons"]
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons/Box Window Mode"]
+offset_left = 779.0
+offset_top = 483.0
+offset_right = 1154.0
+offset_bottom = 555.0
+theme_override_font_sizes/font_size = 52
+text = "Window mode:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CheckBox" type="CheckBox" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons/Box Window Mode"]
+offset_left = 1197.0
+offset_top = 479.0
+offset_right = 1288.0
+offset_bottom = 510.0
+scale = Vector2(3, 2.907)
+text = "Window
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="CheckBox2" type="CheckBox" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons/Box Window Mode"]
+offset_left = 1496.0
+offset_top = 482.99994
+offset_right = 1604.0
+offset_bottom = 514.0
+scale = Vector2(3, 2.907)
+text = "FullScreen
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Box Vsync" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons"]
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons/Box Vsync"]
+offset_left = 989.0
+offset_top = 645.0
+offset_right = 1148.0
+offset_bottom = 717.0
+theme_override_font_sizes/font_size = 52
+text = "Vsync:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CheckBox" type="CheckBox" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons/Box Vsync"]
+offset_left = 1197.0001
+offset_top = 639.0
+offset_right = 1221.0001
+offset_bottom = 670.0
+scale = Vector2(3, 2.907)
+text = "
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprites" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options"]
+visible = false
+z_index = 1
+
+[node name="Back" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Sprites"]
+position = Vector2(615, 624)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_2vhhw")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Dialogue_Setting_inDialogue" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus"]
+visible = false
+script = ExtResource("8_oh74n")
+
+[node name="BG" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue"]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(14.999999, 8.4375)
+sprite_frames = SubResource("SpriteFrames_54s7c")
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue"]
+offset_left = 1015.0
+offset_top = 84.0
+offset_right = 1412.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 82
+text = "Dialogue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Options" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue"]
+
+[node name="SelectIcon" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options"]
+visible = false
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/SelectIcon"]
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_q1nlo")
+autoplay = "default"
+
+[node name="Buttons" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options"]
+
+[node name="TXT_Speed" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons"]
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Speed"]
+offset_left = 619.0
+offset_top = 213.0
+offset_right = 1053.0
+offset_bottom = 326.0
+theme_override_font_sizes/font_size = 82
+text = "Text Speed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="HSlider" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Speed"]
+offset_left = 627.0
+offset_top = 319.0
+offset_right = 1055.0
+offset_bottom = 360.0
+scale = Vector2(2, 2)
+min_value = 5.0
+max_value = 70.0
+step = 5.0
+value = 25.0
+rounded = true
+
+[node name="Display" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Speed"]
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Speed/Display"]
+offset_left = 1542.0
+offset_top = 293.0
+offset_right = 1846.0
+offset_bottom = 410.0
+
+[node name="Display" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Speed/Display"]
+offset_left = 1546.0
+offset_top = 305.0
+offset_right = 1841.0
+offset_bottom = 401.0
+theme_override_font_sizes/font_size = 70
+text = "INSTANT"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TXT_Size" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons"]
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Size"]
+offset_left = 613.0
+offset_top = 381.0
+offset_right = 1010.0
+offset_bottom = 494.0
+theme_override_font_sizes/font_size = 82
+text = "Text Size"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="HSlider" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Size"]
+offset_left = 640.0
+offset_top = 513.0
+offset_right = 1068.0
+offset_bottom = 554.0
+scale = Vector2(2, 2)
+min_value = 32.0
+max_value = 47.0
+value = 32.0
+
+[node name="Display" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Size"]
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Size/Display"]
+offset_left = 1542.0
+offset_top = 492.0
+offset_right = 1846.0
+offset_bottom = 609.0
+
+[node name="Display" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Size/Display"]
+offset_left = 1611.0
+offset_top = 499.0
+offset_right = 1782.0
+offset_bottom = 601.0
+theme_override_fonts/font = ExtResource("8_6k35r")
+theme_override_font_sizes/font_size = 47
+text = "\"A\""
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Auto_Speed" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons"]
+
+[node name="Label" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/Auto_Speed"]
+offset_left = 644.0
+offset_top = 613.0
+offset_right = 1391.0
+offset_bottom = 726.0
+theme_override_font_sizes/font_size = 82
+text = "Auto-forward Time"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="HSlider" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/Auto_Speed"]
+offset_left = 644.0
+offset_top = 728.0
+offset_right = 1072.0
+offset_bottom = 769.0
+scale = Vector2(2, 2)
+max_value = 5.0
+rounded = true
+
+[node name="Display" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/Auto_Speed"]
+
+[node name="Panel" type="Panel" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/Auto_Speed/Display"]
+offset_left = 1542.0
+offset_top = 700.0
+offset_right = 1846.0
+offset_bottom = 817.0
+
+[node name="Display" type="Label" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/Auto_Speed/Display"]
+offset_left = 1546.0
+offset_top = 710.0
+offset_right = 1841.0
+offset_bottom = 806.0
+theme_override_font_sizes/font_size = 70
+text = "INSTANT"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Back" type="Button" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons"]
+offset_left = 985.0
+offset_top = 873.0
+offset_right = 1412.0
+offset_bottom = 993.0
+theme_override_font_sizes/font_size = 38
+text = "Back
+"
+
+[node name="Sprites" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options"]
+visible = false
+z_index = 1
+
+[node name="Control" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Sprites"]
+position = Vector2(614.00006, 244.99998)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_oh74n")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Audio" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Sprites"]
+position = Vector2(614, 363)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_6k35r")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Graphic" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Sprites"]
+position = Vector2(616.00006, 486)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_ytlfu")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Back" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Sprites"]
+position = Vector2(615, 624)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_3xt1m")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Menus" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options"]
+z_index = 1
+
+[node name="SaveLoad_inDialogue" type="Node2D" parent="Options/Menus"]
+visible = false
+script = ExtResource("3_6r8xb")
+
+[node name="BG" type="AnimatedSprite2D" parent="Options/Menus/SaveLoad_inDialogue"]
+visible = false
+position = Vector2(960, 500)
+scale = Vector2(14.999999, 8.4375)
+sprite_frames = SubResource("SpriteFrames_t3sue")
+
+[node name="Label" type="Label" parent="Options/Menus/SaveLoad_inDialogue"]
+offset_left = 980.0
+offset_top = 125.0
+offset_right = 1388.0
+offset_bottom = 288.0
+theme_override_font_sizes/font_size = 74
+text = "Save / Load"
+
+[node name="Options" type="Node2D" parent="Options/Menus/SaveLoad_inDialogue"]
+
+[node name="SelectIcon" type="Node2D" parent="Options/Menus/SaveLoad_inDialogue/Options"]
+visible = false
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/Menus/SaveLoad_inDialogue/Options/SelectIcon"]
+visible = false
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_2k7to")
+autoplay = "default"
+
+[node name="ColorRect" type="ColorRect" parent="Options/Menus/SaveLoad_inDialogue/Options/SelectIcon"]
+visible = false
+offset_left = 40.0
+offset_top = 160.0
+offset_right = 640.0
+offset_bottom = 930.0
+
+[node name="Sprites" type="Node2D" parent="Options/Menus/SaveLoad_inDialogue/Options"]
+visible = false
+z_index = 1
+
+[node name="Back" type="AnimatedSprite2D" parent="Options/Menus/SaveLoad_inDialogue/Options/Sprites"]
+position = Vector2(960, 1020)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_vcrgc")
+autoplay = "default"
+
+[node name="Menus" type="Node2D" parent="Options/Menus/SaveLoad_inDialogue/Options"]
+z_index = 1
+
+[node name="File1" type="Node2D" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus"]
+
+[node name="ColorRect" type="ColorRect" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File1"]
+offset_left = 670.0
+offset_top = 268.0
+offset_right = 1114.0
+offset_bottom = 602.0
+color = Color(0.49354547, 0.49354553, 0.49354553, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File1"]
+offset_left = 676.0
+offset_top = 278.0
+offset_right = 1106.0
+offset_bottom = 529.0
+texture = ExtResource("2_fu1ex")
+expand_mode = 1
+
+[node name="Date Label" type="Label" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File1"]
+offset_left = 689.0
+offset_top = 533.0
+offset_right = 781.0
+offset_bottom = 583.0
+theme_override_font_sizes/font_size = 36
+text = "Date:"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 161
+
+[node name="Date" type="Label" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File1"]
+offset_left = 800.0
+offset_top = 535.0
+offset_right = 1103.0
+offset_bottom = 585.0
+theme_override_font_sizes/font_size = 36
+text = "X/XX/XXXX, XX:XX"
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File1"]
+offset_left = 743.0
+offset_top = 243.0
+offset_right = 1028.0
+offset_bottom = 295.0
+color = Color(0.31431612, 0.31431612, 0.3143161, 1)
+
+[node name="Title" type="Label" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File1"]
+offset_left = 753.0
+offset_top = 250.0
+offset_right = 1018.0
+offset_bottom = 284.0
+theme_override_font_sizes/font_size = 24
+text = "Winter, December 31st"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="File2" type="Node2D" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus"]
+position = Vector2(558, 0)
+
+[node name="ColorRect" type="ColorRect" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File2"]
+offset_left = 653.0
+offset_top = 268.0
+offset_right = 1097.0
+offset_bottom = 602.0
+color = Color(0.49354547, 0.49354553, 0.49354553, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File2"]
+offset_left = 659.0
+offset_top = 278.0
+offset_right = 1089.0
+offset_bottom = 529.0
+texture = ExtResource("2_fu1ex")
+expand_mode = 1
+
+[node name="Date Label" type="Label" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File2"]
+offset_left = 672.0
+offset_top = 533.0
+offset_right = 764.0
+offset_bottom = 583.0
+theme_override_font_sizes/font_size = 36
+text = "Date:"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 161
+
+[node name="Date" type="Label" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File2"]
+offset_left = 783.0
+offset_top = 535.0
+offset_right = 1086.0
+offset_bottom = 585.0
+theme_override_font_sizes/font_size = 36
+text = "X/XX/XXXX, XX:XX"
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File2"]
+offset_left = 726.0
+offset_top = 243.0
+offset_right = 1011.0
+offset_bottom = 295.0
+color = Color(0.31431612, 0.31431612, 0.3143161, 1)
+
+[node name="Title" type="Label" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File2"]
+offset_left = 736.0
+offset_top = 250.0
+offset_right = 821.0
+offset_bottom = 284.0
+theme_override_font_sizes/font_size = 24
+text = "Winter, December 31st"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="File3" type="Node2D" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus"]
+position = Vector2(17, 406)
+
+[node name="ColorRect" type="ColorRect" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File3"]
+offset_left = 653.0
+offset_top = 268.0
+offset_right = 1097.0
+offset_bottom = 602.0
+color = Color(0.49354547, 0.49354553, 0.49354553, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File3"]
+offset_left = 659.0
+offset_top = 278.0
+offset_right = 1089.0
+offset_bottom = 529.0
+texture = ExtResource("2_fu1ex")
+expand_mode = 1
+
+[node name="Date Label" type="Label" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File3"]
+offset_left = 672.0
+offset_top = 533.0
+offset_right = 764.0
+offset_bottom = 583.0
+theme_override_font_sizes/font_size = 36
+text = "Date:"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 161
+
+[node name="Date" type="Label" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File3"]
+offset_left = 783.0
+offset_top = 535.0
+offset_right = 1086.0
+offset_bottom = 585.0
+theme_override_font_sizes/font_size = 36
+text = "X/XX/XXXX, XX:XX"
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File3"]
+offset_left = 726.0
+offset_top = 243.0
+offset_right = 1011.0
+offset_bottom = 295.0
+color = Color(0.31431612, 0.31431612, 0.3143161, 1)
+
+[node name="Title" type="Label" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File3"]
+offset_left = 736.0
+offset_top = 250.0
+offset_right = 821.0
+offset_bottom = 284.0
+theme_override_font_sizes/font_size = 24
+text = "Winter, December 31st"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="File4" type="Node2D" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus"]
+position = Vector2(559, 406)
+
+[node name="ColorRect" type="ColorRect" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File4"]
+offset_left = 653.0
+offset_top = 268.0
+offset_right = 1097.0
+offset_bottom = 602.0
+color = Color(0.49354547, 0.49354553, 0.49354553, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File4"]
+offset_left = 659.0
+offset_top = 278.0
+offset_right = 1089.0
+offset_bottom = 529.0
+texture = ExtResource("2_fu1ex")
+expand_mode = 1
+
+[node name="Date Label" type="Label" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File4"]
+offset_left = 672.0
+offset_top = 533.0
+offset_right = 764.0
+offset_bottom = 583.0
+theme_override_font_sizes/font_size = 36
+text = "Date:"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 161
+
+[node name="Date" type="Label" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File4"]
+offset_left = 783.0
+offset_top = 535.0
+offset_right = 1086.0
+offset_bottom = 585.0
+theme_override_font_sizes/font_size = 36
+text = "X/XX/XXXX, XX:XX"
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File4"]
+offset_left = 726.0
+offset_top = 243.0
+offset_right = 1011.0
+offset_bottom = 295.0
+color = Color(0.31431612, 0.31431612, 0.3143161, 1)
+
+[node name="Title" type="Label" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/File4"]
+offset_left = 736.0
+offset_top = 250.0
+offset_right = 821.0
+offset_bottom = 284.0
+theme_override_font_sizes/font_size = 24
+text = "Winter, December 31st"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pages" type="Node2D" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus"]
+
+[node name="ColorRect" type="ColorRect" parent="Options/Menus/SaveLoad_inDialogue/Options/Menus/Pages"]
+offset_left = 1755.0
+offset_top = 167.0
+offset_right = 1884.0
+offset_bottom = 1040.0
+color = Color(0.49354547, 0.49354553, 0.49354553, 1)
+
+[node name="Buttons" type="Node2D" parent="Options/Menus/SaveLoad_inDialogue/Options"]
+
+[node name="file1" type="Button" parent="Options/Menus/SaveLoad_inDialogue/Options/Buttons"]
+z_index = 1
+offset_left = 668.0
+offset_top = 268.0
+offset_right = 1115.0
+offset_bottom = 603.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_q1nlo")
+
+[node name="file2" type="Button" parent="Options/Menus/SaveLoad_inDialogue/Options/Buttons"]
+z_index = 1
+offset_left = 1209.0
+offset_top = 268.0
+offset_right = 1656.0
+offset_bottom = 603.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_oh74n")
+
+[node name="file3" type="Button" parent="Options/Menus/SaveLoad_inDialogue/Options/Buttons"]
+z_index = 1
+offset_left = 668.0
+offset_top = 673.0
+offset_right = 1115.0
+offset_bottom = 1008.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_6k35r")
+
+[node name="file4" type="Button" parent="Options/Menus/SaveLoad_inDialogue/Options/Buttons"]
+z_index = 1
+offset_left = 1211.0
+offset_top = 673.0
+offset_right = 1658.0
+offset_bottom = 1008.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ytlfu")
+
+[node name="Pages_buttons" type="Node2D" parent="Options/Menus/SaveLoad_inDialogue/Options/Buttons"]
+
+[node name="A" type="Button" parent="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons"]
+z_index = 1
+offset_left = 1767.0
+offset_top = 189.0
+offset_right = 1874.0
+offset_bottom = 282.0
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jv028")
+toggle_mode = true
+text = "A"
+
+[node name="1" type="Button" parent="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons"]
+z_index = 1
+offset_left = 1767.0
+offset_top = 290.0
+offset_right = 1874.0
+offset_bottom = 383.0
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jv028")
+toggle_mode = true
+button_pressed = true
+text = "1"
+
+[node name="2" type="Button" parent="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons"]
+z_index = 1
+offset_left = 1767.0
+offset_top = 397.0
+offset_right = 1874.0
+offset_bottom = 490.0
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jv028")
+toggle_mode = true
+text = "2"
+
+[node name="3" type="Button" parent="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons"]
+z_index = 1
+offset_left = 1767.0
+offset_top = 504.0
+offset_right = 1874.0
+offset_bottom = 597.0
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jv028")
+toggle_mode = true
+text = "3"
+
+[node name="4" type="Button" parent="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons"]
+z_index = 1
+offset_left = 1767.0
+offset_top = 611.0
+offset_right = 1874.0
+offset_bottom = 704.0
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jv028")
+toggle_mode = true
+text = "4"
+
+[node name="5" type="Button" parent="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons"]
+z_index = 1
+offset_left = 1767.0
+offset_top = 718.0
+offset_right = 1874.0
+offset_bottom = 811.0
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jv028")
+toggle_mode = true
+text = "5"
+
+[node name="6" type="Button" parent="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons"]
+z_index = 1
+offset_left = 1767.0
+offset_top = 825.0
+offset_right = 1874.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jv028")
+toggle_mode = true
+text = "6"
+
+[node name="7" type="Button" parent="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons"]
+z_index = 1
+offset_left = 1767.0
+offset_top = 932.0
+offset_right = 1874.0
+offset_bottom = 1025.0
+theme_override_font_sizes/font_size = 52
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jv028")
+toggle_mode = true
+text = "7"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 564.0
+offset_top = -46.0
+offset_right = 579.0
+offset_bottom = 1167.0
+color = Color(1, 0.20784314, 0.16078432, 1)
+
+[connection signal="pressed" from="Options/Buttons/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Options/Buttons/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Options/Buttons/Setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="Options/Buttons/Main Menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Options/Buttons/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Options/Buttons/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Options/Menus/Setting_inDialogue/Options/Buttons/Control" to="Options/Menus/Setting_inDialogue" method="_on_control_pressed"]
+[connection signal="pressed" from="Options/Menus/Setting_inDialogue/Options/Buttons/Audio" to="Options/Menus/Setting_inDialogue" method="_on_audio_pressed"]
+[connection signal="pressed" from="Options/Menus/Setting_inDialogue/Options/Buttons/Graphic" to="Options/Menus/Setting_inDialogue" method="_on_graphic_pressed"]
+[connection signal="pressed" from="Options/Menus/Setting_inDialogue/Options/Buttons/Dialogue_Text" to="Options/Menus/Setting_inDialogue" method="_on_dialogue_text_pressed"]
+[connection signal="pressed" from="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue/Options/Buttons/Back" to="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue" method="_on_back_pressed"]
+[connection signal="drag_ended" from="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons/Bus_master/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue" method="_on_progress_bar_X_drag_ended"]
+[connection signal="value_changed" from="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons/Bus_master/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue" method="_on_bus_master_progress_bar_value_changed"]
+[connection signal="drag_ended" from="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons/Bus_music/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue" method="_on_progress_bar_X_drag_ended"]
+[connection signal="value_changed" from="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons/Bus_music/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue" method="_on_bus_music_progress_bar_value_changed"]
+[connection signal="drag_ended" from="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons/Bus_efx/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue" method="_on_progress_bar_X_drag_ended"]
+[connection signal="value_changed" from="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons/Bus_efx/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue" method="_on_bus_efx_progress_bar_value_changed"]
+[connection signal="drag_ended" from="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons/Bus_voice/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue" method="_on_progress_bar_X_drag_ended"]
+[connection signal="value_changed" from="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons/Bus_voice/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue" method="_on_bus_voice_progress_bar_value_changed"]
+[connection signal="pressed" from="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue/Options/Buttons/Back" to="Options/Menus/Setting_inDialogue/Options/Menus/Audio_inDialogue" method="_on_back_pressed"]
+[connection signal="pressed" from="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons/Back" to="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue" method="_on_back_pressed"]
+[connection signal="pressed" from="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons/Box Window Mode/CheckBox" to="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue" method="_on_window_check_box_pressed"]
+[connection signal="pressed" from="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons/Box Window Mode/CheckBox2" to="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue" method="_on_fullscreen_check_box_2_pressed"]
+[connection signal="pressed" from="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue/Options/Buttons/Box Vsync/CheckBox" to="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue" method="_on_vsync_check_box_pressed"]
+[connection signal="drag_ended" from="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Speed/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue" method="_on_progress_bar_x_drag_ended"]
+[connection signal="value_changed" from="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Speed/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue" method="_on_progress_bar_txt_speed_drag_"]
+[connection signal="drag_ended" from="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Size/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue" method="_on_progress_bar_x_drag_ended"]
+[connection signal="value_changed" from="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/TXT_Size/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue" method="_on_progress_bar_txt_size_drag_"]
+[connection signal="drag_ended" from="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/Auto_Speed/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue" method="_on_progress_bar_x_drag_ended"]
+[connection signal="value_changed" from="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/Auto_Speed/ProgressBar" to="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue" method="_on_progress_bar_auto_speed_drag_"]
+[connection signal="pressed" from="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue/Options/Buttons/Back" to="Options/Menus/Setting_inDialogue/Options/Menus/Dialogue_Setting_inDialogue" method="_on_back_pressed"]
+[connection signal="pressed" from="Options/Menus/SaveLoad_inDialogue/Options/Buttons/file1" to="Options/Menus/SaveLoad_inDialogue" method="_on_file_x_pressed" binds= ["1"]]
+[connection signal="pressed" from="Options/Menus/SaveLoad_inDialogue/Options/Buttons/file2" to="Options/Menus/SaveLoad_inDialogue" method="_on_file_x_pressed" binds= ["2"]]
+[connection signal="pressed" from="Options/Menus/SaveLoad_inDialogue/Options/Buttons/file3" to="Options/Menus/SaveLoad_inDialogue" method="_on_file_x_pressed" binds= ["3"]]
+[connection signal="pressed" from="Options/Menus/SaveLoad_inDialogue/Options/Buttons/file4" to="Options/Menus/SaveLoad_inDialogue" method="_on_file_x_pressed" binds= ["4"]]
+[connection signal="pressed" from="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons/A" to="Options/Menus/SaveLoad_inDialogue" method="_on_page_x_pressed" binds= ["A"]]
+[connection signal="pressed" from="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons/1" to="Options/Menus/SaveLoad_inDialogue" method="_on_page_x_pressed" binds= ["1"]]
+[connection signal="pressed" from="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons/2" to="Options/Menus/SaveLoad_inDialogue" method="_on_page_x_pressed" binds= ["2"]]
+[connection signal="pressed" from="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons/3" to="Options/Menus/SaveLoad_inDialogue" method="_on_page_x_pressed" binds= ["3"]]
+[connection signal="pressed" from="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons/4" to="Options/Menus/SaveLoad_inDialogue" method="_on_page_x_pressed" binds= ["4"]]
+[connection signal="pressed" from="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons/5" to="Options/Menus/SaveLoad_inDialogue" method="_on_page_x_pressed" binds= ["5"]]
+[connection signal="pressed" from="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons/6" to="Options/Menus/SaveLoad_inDialogue" method="_on_page_x_pressed" binds= ["6"]]
+[connection signal="pressed" from="Options/Menus/SaveLoad_inDialogue/Options/Buttons/Pages_buttons/7" to="Options/Menus/SaveLoad_inDialogue" method="_on_page_x_pressed" binds= ["7"]]
