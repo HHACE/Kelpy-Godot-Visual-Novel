@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=3 uid="uid://bqcxdwp7y2vka"]
+
+[ext_resource type="Script" uid="uid://bwm866mmp8uop" path="res://scene/Game/game_cafe.gd" id="1_uvua1"]
+[ext_resource type="PackedScene" uid="uid://cw2lgoa6bpaq6" path="res://scene/Game/cafe_game/character_body_3d.tscn" id="2_rxidv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rxidv"]
+albedo_color = Color(0, 0.6694015, 0.38232675, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cl1wt"]
+material = SubResource("StandardMaterial3D_rxidv")
+size = Vector3(35, 1, 35)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rxidv"]
+points = PackedVector3Array(-17.5, -0.5, -17.5, -17.5, 0.5, -17.5, 17.5, -0.5, -17.5, -17.5, -0.5, 17.5, -17.5, 0.5, 17.5, 17.5, 0.5, -17.5, 17.5, -0.5, 17.5, 17.5, 0.5, 17.5)
+
+[sub_resource type="Environment" id="Environment_rxidv"]
+background_energy_multiplier = 10.23
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cl1wt"]
+size = Vector3(1, 1.1264648, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wocuw"]
+albedo_color = Color(0.72513145, 0.30436075, 0.49565774, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l7bp0"]
+material = SubResource("StandardMaterial3D_wocuw")
+
+[node name="game_cafe" type="Node3D"]
+script = ExtResource("1_uvua1")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_rxidv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5469322, 0)
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8085494, 0.04053116, 0.22336602)
+mesh = SubResource("BoxMesh_cl1wt")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_rxidv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.04136, 0)
+layers = 1023
+directional_shadow_max_distance = 485.1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rxidv")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." groups=["pick_up_able"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4280052, 1.6976126, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06323242, 0)
+shape = SubResource("BoxShape3D_cl1wt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12015104, 0)
+mesh = SubResource("BoxMesh_l7bp0")

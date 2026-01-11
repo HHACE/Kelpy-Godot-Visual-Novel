@@ -1,0 +1,298 @@
+[gd_scene load_steps=7 format=3 uid="uid://l56ospvcjcgg"]
+
+[ext_resource type="Texture2D" uid="uid://cf3acei12geoq" path="res://icon.svg" id="1_jiwl8"]
+[ext_resource type="Script" uid="uid://dydohobql5qvv" path="res://scene/UI/Menus/menu_save_load.gd" id="1_qbdff"]
+[ext_resource type="Texture2D" uid="uid://ckge2lmnns4wf" path="res://assets/sprites/save_1.png" id="3_y58kn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qbdff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jiwl8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bhupg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jiwl8")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y58kn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jiwl8")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[node name="SaveLoad" type="Node2D"]
+script = ExtResource("1_qbdff")
+
+[node name="BG" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 500)
+scale = Vector2(14.999999, 8.4375)
+sprite_frames = SubResource("SpriteFrames_qbdff")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 750.0
+offset_top = 39.0
+offset_right = 1158.0
+offset_bottom = 202.0
+theme_override_font_sizes/font_size = 74
+text = "Save / Load"
+
+[node name="Options" type="Node2D" parent="."]
+
+[node name="SelectIcon" type="Node2D" parent="Options"]
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/SelectIcon"]
+visible = false
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_bhupg")
+autoplay = "default"
+
+[node name="ColorRect" type="ColorRect" parent="Options/SelectIcon"]
+offset_left = 40.0
+offset_top = 160.0
+offset_right = 640.0
+offset_bottom = 930.0
+
+[node name="Sprites" type="Node2D" parent="Options"]
+visible = false
+z_index = 1
+
+[node name="Back" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(960, 1020)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_y58kn")
+autoplay = "default"
+
+[node name="Menus" type="Node2D" parent="Options"]
+z_index = 1
+
+[node name="File1" type="Node2D" parent="Options/Menus"]
+
+[node name="ColorRect" type="ColorRect" parent="Options/Menus/File1"]
+offset_left = 60.0
+offset_top = 182.0
+offset_right = 621.0
+offset_bottom = 910.0
+color = Color(0.49354547, 0.49354553, 0.49354553, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Options/Menus/File1"]
+offset_left = 80.0
+offset_top = 213.0
+offset_right = 604.0
+offset_bottom = 666.0
+texture = ExtResource("3_y58kn")
+
+[node name="Date Label" type="Label" parent="Options/Menus/File1"]
+offset_left = 100.0
+offset_top = 720.0
+offset_right = 230.0
+offset_bottom = 790.0
+theme_override_font_sizes/font_size = 51
+text = "Date:"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 161
+
+[node name="Date" type="Label" parent="Options/Menus/File1"]
+offset_left = 250.0
+offset_top = 730.0
+offset_right = 590.0
+offset_bottom = 785.0
+theme_override_font_sizes/font_size = 40
+text = "X/XX/XXXX, XX:XX"
+horizontal_alignment = 1
+
+[node name="Time Label" type="Label" parent="Options/Menus/File1"]
+offset_left = 100.0
+offset_top = 820.0
+offset_right = 352.0
+offset_bottom = 890.0
+theme_override_font_sizes/font_size = 51
+text = "Play Time:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="Label" parent="Options/Menus/File1"]
+offset_left = 391.0
+offset_top = 820.0
+offset_right = 609.0
+offset_bottom = 890.0
+theme_override_font_sizes/font_size = 51
+text = "XX:XX:XX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="File2" type="Node2D" parent="Options/Menus"]
+
+[node name="ColorRect" type="ColorRect" parent="Options/Menus/File2"]
+offset_left = 680.0
+offset_top = 182.0
+offset_right = 1241.0
+offset_bottom = 910.0
+color = Color(0.49354547, 0.49354553, 0.49354553, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Options/Menus/File2"]
+offset_left = 700.0
+offset_top = 213.0
+offset_right = 1224.0
+offset_bottom = 666.0
+texture = ExtResource("1_jiwl8")
+
+[node name="Date Label" type="Label" parent="Options/Menus/File2"]
+offset_left = 720.0
+offset_top = 720.0
+offset_right = 850.0
+offset_bottom = 790.0
+theme_override_font_sizes/font_size = 51
+text = "Date:"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 161
+
+[node name="Date" type="Label" parent="Options/Menus/File2"]
+offset_left = 870.0
+offset_top = 730.0
+offset_right = 1210.0
+offset_bottom = 785.0
+theme_override_font_sizes/font_size = 40
+text = "X/XX/XXXX, XX:XX"
+horizontal_alignment = 1
+
+[node name="Time Label" type="Label" parent="Options/Menus/File2"]
+offset_left = 720.0
+offset_top = 820.0
+offset_right = 972.0
+offset_bottom = 890.0
+theme_override_font_sizes/font_size = 51
+text = "Play Time:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="Label" parent="Options/Menus/File2"]
+offset_left = 1011.0
+offset_top = 820.0
+offset_right = 1229.0
+offset_bottom = 890.0
+theme_override_font_sizes/font_size = 51
+text = "XX:XX:XX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="File3" type="Node2D" parent="Options/Menus"]
+
+[node name="ColorRect" type="ColorRect" parent="Options/Menus/File3"]
+offset_left = 1300.0
+offset_top = 182.0
+offset_right = 1861.0
+offset_bottom = 910.0
+color = Color(0.49354547, 0.49354553, 0.49354553, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Options/Menus/File3"]
+offset_left = 1320.0
+offset_top = 213.0
+offset_right = 1844.0
+offset_bottom = 666.0
+texture = ExtResource("1_jiwl8")
+
+[node name="Date Label" type="Label" parent="Options/Menus/File3"]
+offset_left = 1340.0
+offset_top = 720.0
+offset_right = 1470.0
+offset_bottom = 790.0
+theme_override_font_sizes/font_size = 51
+text = "Date:"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 161
+
+[node name="Date" type="Label" parent="Options/Menus/File3"]
+offset_left = 1490.0
+offset_top = 730.0
+offset_right = 1830.0
+offset_bottom = 785.0
+theme_override_font_sizes/font_size = 40
+text = "X/XX/XXXX, XX:XX"
+horizontal_alignment = 1
+
+[node name="Time Label" type="Label" parent="Options/Menus/File3"]
+offset_left = 1340.0
+offset_top = 820.0
+offset_right = 1592.0
+offset_bottom = 890.0
+theme_override_font_sizes/font_size = 51
+text = "Play Time:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="Label" parent="Options/Menus/File3"]
+offset_left = 1631.0
+offset_top = 820.0
+offset_right = 1849.0
+offset_bottom = 890.0
+theme_override_font_sizes/font_size = 51
+text = "XX:XX:XX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="Node2D" parent="Options"]
+
+[node name="file1" type="Button" parent="Options/Buttons"]
+z_index = 1
+offset_left = 60.0
+offset_top = 182.0
+offset_right = 621.0
+offset_bottom = 910.0
+
+[node name="file2" type="Button" parent="Options/Buttons"]
+z_index = 1
+offset_left = 680.0
+offset_top = 180.0
+offset_right = 1240.0
+offset_bottom = 908.0
+
+[node name="file3" type="Button" parent="Options/Buttons"]
+z_index = 1
+offset_left = 1300.0
+offset_top = 182.0
+offset_right = 1860.0
+offset_bottom = 910.0
+
+[node name="Back" type="Button" parent="Options/Buttons"]
+offset_left = 750.0
+offset_top = 960.0
+offset_right = 1177.0
+offset_bottom = 1080.0
+theme_override_font_sizes/font_size = 38
+text = "Back
+"
+
+[connection signal="pressed" from="Options/Buttons/file1" to="." method="_on_file_x_pressed" binds= ["1"]]
+[connection signal="pressed" from="Options/Buttons/file2" to="." method="_on_file_x_pressed" binds= ["2"]]
+[connection signal="pressed" from="Options/Buttons/file3" to="." method="_on_file_x_pressed" binds= ["3"]]
+[connection signal="pressed" from="Options/Buttons/Back" to="." method="_on_back_pressed"]

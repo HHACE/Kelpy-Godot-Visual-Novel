@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://cw2lgoa6bpaq6"]
+
+[ext_resource type="Script" uid="uid://b8lm03bmq0ulk" path="res://scene/Game/cafe_player.gd" id="1_4xbpp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uvua1"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4xbpp"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_4xbpp"]
+radius = 0.2
+height = 0.4
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+script = ExtResource("1_4xbpp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_uvua1")
+
+[node name="WorldModel" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WorldModel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+layers = 2
+mesh = SubResource("CapsuleMesh_4xbpp")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6837769, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+cull_mask = 1048573
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+target_position = Vector3(0, 0, -4)
+debug_shape_thickness = 5
+
+[node name="Hand" type="Node3D" parent="Head/Camera3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D/Hand"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5461731, -0.3671875, -1.1512451)
+mesh = SubResource("SphereMesh_4xbpp")

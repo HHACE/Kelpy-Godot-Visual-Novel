@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfyv8a7ta1e3o"]
+
+[ext_resource type="Script" uid="uid://cioool0eu8t8d" path="res://scene/UI/Menus/menu_credit.gd" id="1_wo02s"]
+[ext_resource type="Texture2D" uid="uid://cf3acei12geoq" path="res://icon.svg" id="2_r6ybf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wo02s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_r6ybf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lnxie"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_r6ybf")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ahkq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_r6ybf")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[node name="Credit" type="Node2D"]
+script = ExtResource("1_wo02s")
+
+[node name="BG" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(14.999999, 8.4375)
+sprite_frames = SubResource("SpriteFrames_wo02s")
+
+[node name="Options" type="Node2D" parent="."]
+
+[node name="SelectIcon" type="Node2D" parent="Options"]
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/SelectIcon"]
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_lnxie")
+autoplay = "default"
+
+[node name="Buttons" type="Node2D" parent="Options"]
+
+[node name="Back" type="Button" parent="Options/Buttons"]
+offset_left = 750.0
+offset_top = 748.0
+offset_right = 1177.0
+offset_bottom = 868.0
+theme_override_font_sizes/font_size = 38
+text = "Back
+"
+
+[node name="Sprites" type="Node2D" parent="Options"]
+visible = false
+z_index = 1
+
+[node name="Back" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(615, 624)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_5ahkq")
+animation = &"highlight"
+autoplay = "default"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 830.0
+offset_top = 130.0
+offset_right = 1094.0
+offset_bottom = 661.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 62
+text = "CREDITS:
+KELPY
+KELPY
+KELPY
+KELPY
+KELPY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Options/Buttons/Back" to="." method="_on_back_pressed"]

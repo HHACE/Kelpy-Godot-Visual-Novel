@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs7dvdr0g70dr"]
+
+[ext_resource type="Script" uid="uid://donb51ulv48et" path="res://scene/Game/game.gd" id="1_4nxsp"]
+[ext_resource type="PackedScene" uid="uid://cwlfr3lmt55qk" path="res://scene/UI/Menus/pause_menu_in_game.tscn" id="2_p7xw7"]
+[ext_resource type="PackedScene" uid="uid://cvpi4eq2uhjfx" path="res://scene/UI/Dialogue/dialogue.tscn" id="2_ugm23"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_4nxsp")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Scene" type="Node2D" parent="SubViewportContainer/SubViewport"]
+
+[node name="Label" type="Label" parent="SubViewportContainer/SubViewport/Scene"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 339.0
+offset_top = 448.0
+offset_right = 1512.0
+offset_bottom = 667.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 160
+text = "THIS IS A GAME"
+
+[node name="Dialogue" parent="SubViewportContainer/SubViewport/Scene" instance=ExtResource("2_ugm23")]
+
+[node name="PauseMenu_InGame" parent="." instance=ExtResource("2_p7xw7")]
+visible = false

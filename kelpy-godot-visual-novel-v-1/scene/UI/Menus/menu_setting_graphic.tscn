@@ -1,0 +1,161 @@
+[gd_scene load_steps=6 format=3 uid="uid://bb26211j84e2g"]
+
+[ext_resource type="Script" uid="uid://bkq6cwpw5oa6s" path="res://scene/UI/Menus/menu_setting_graphic.gd" id="1_x1brn"]
+[ext_resource type="Texture2D" uid="uid://cf3acei12geoq" path="res://icon.svg" id="2_vdlfo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x1brn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vdlfo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lnxie"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vdlfo")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ahkq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vdlfo")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[node name="Graphic" type="Node2D"]
+script = ExtResource("1_x1brn")
+
+[node name="BG" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(14.999999, 8.4375)
+sprite_frames = SubResource("SpriteFrames_x1brn")
+
+[node name="Options" type="Node2D" parent="."]
+
+[node name="SelectIcon" type="Node2D" parent="Options"]
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/SelectIcon"]
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_lnxie")
+autoplay = "default"
+
+[node name="Buttons" type="Node2D" parent="Options"]
+
+[node name="Back" type="Button" parent="Options/Buttons"]
+offset_left = 750.0
+offset_top = 748.0
+offset_right = 1177.0
+offset_bottom = 868.0
+theme_override_font_sizes/font_size = 38
+text = "Back
+"
+
+[node name="Box Resolution" type="Node2D" parent="Options/Buttons"]
+
+[node name="OptionButton" type="OptionButton" parent="Options/Buttons/Box Resolution"]
+offset_left = 948.0
+offset_top = 170.0
+offset_right = 1341.0
+offset_bottom = 251.0
+
+[node name="Label" type="Label" parent="Options/Buttons/Box Resolution"]
+offset_left = 620.0
+offset_top = 170.0
+offset_right = 902.0
+offset_bottom = 247.0
+theme_override_font_sizes/font_size = 52
+text = "Resolution:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Box Window Mode" type="Node2D" parent="Options/Buttons"]
+
+[node name="Label" type="Label" parent="Options/Buttons/Box Window Mode"]
+offset_left = 530.0
+offset_top = 334.0
+offset_right = 905.0
+offset_bottom = 406.0
+theme_override_font_sizes/font_size = 52
+text = "Window mode:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="Options/Buttons/Box Window Mode"]
+offset_left = 948.0
+offset_top = 330.0
+offset_right = 1039.0
+offset_bottom = 361.0
+scale = Vector2(3, 2.907)
+text = "Window
+"
+
+[node name="CheckBox2" type="CheckBox" parent="Options/Buttons/Box Window Mode"]
+offset_left = 1247.0
+offset_top = 333.99997
+offset_right = 1355.0
+offset_bottom = 365.0
+scale = Vector2(3, 2.907)
+text = "FullScreen
+"
+
+[node name="Box Vsync" type="Node2D" parent="Options/Buttons"]
+
+[node name="Label" type="Label" parent="Options/Buttons/Box Vsync"]
+offset_left = 740.0
+offset_top = 496.0
+offset_right = 899.0
+offset_bottom = 568.0
+theme_override_font_sizes/font_size = 52
+text = "Vsync:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="Options/Buttons/Box Vsync"]
+offset_left = 948.0001
+offset_top = 490.0
+offset_right = 972.0001
+offset_bottom = 521.0
+scale = Vector2(3, 2.907)
+text = "
+"
+
+[node name="Sprites" type="Node2D" parent="Options"]
+visible = false
+z_index = 1
+
+[node name="Back" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(615, 624)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_5ahkq")
+animation = &"highlight"
+autoplay = "default"
+
+[connection signal="pressed" from="Options/Buttons/Back" to="." method="_on_back_pressed"]
+[connection signal="item_selected" from="Options/Buttons/Box Resolution/OptionButton" to="." method="_on_Resolution_option_button_item_selected"]
+[connection signal="pressed" from="Options/Buttons/Box Window Mode/CheckBox" to="." method="_on_window_check_box_pressed"]
+[connection signal="pressed" from="Options/Buttons/Box Window Mode/CheckBox2" to="." method="_on_fullscreen_check_box_2_pressed"]
+[connection signal="pressed" from="Options/Buttons/Box Vsync/CheckBox" to="." method="_on_vsync_check_box_pressed"]

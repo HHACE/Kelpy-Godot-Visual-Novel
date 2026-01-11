@@ -1,0 +1,227 @@
+[gd_scene load_steps=10 format=3 uid="uid://ylpawnenwars"]
+
+[ext_resource type="Script" uid="uid://724i37fe28kg" path="res://scene/UI/Menus/menu_setting_audio.gd" id="1_l43me"]
+[ext_resource type="Texture2D" uid="uid://cf3acei12geoq" path="res://icon.svg" id="2_k103b"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l43me"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k103b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lnxie"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k103b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c1dx3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k103b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"mute",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mrmdi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k103b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"mute",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cu7p1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k103b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"mute",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_840qh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k103b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"mute",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ahkq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k103b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"highlight",
+"speed": 5.0
+}]
+
+[node name="Audio" type="Node2D"]
+script = ExtResource("1_l43me")
+
+[node name="BG" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(14.999999, 8.4375)
+sprite_frames = SubResource("SpriteFrames_l43me")
+
+[node name="Options" type="Node2D" parent="."]
+
+[node name="SelectIcon" type="Node2D" parent="Options"]
+
+[node name="SelectSprite" type="AnimatedSprite2D" parent="Options/SelectIcon"]
+modulate = Color(0.8117647, 1, 0.27058825, 1)
+position = Vector2(375, 249)
+scale = Vector2(0.5625, 0.5078125)
+sprite_frames = SubResource("SpriteFrames_lnxie")
+autoplay = "default"
+
+[node name="Buttons" type="Node2D" parent="Options"]
+
+[node name="Bus_master" type="Node2D" parent="Options/Buttons"]
+
+[node name="ProgressBar" type="HSlider" parent="Options/Buttons/Bus_master"]
+offset_left = 673.0
+offset_top = 162.0
+offset_right = 1101.0
+offset_bottom = 203.0
+scale = Vector2(2, 2)
+
+[node name="Bus_music" type="Node2D" parent="Options/Buttons"]
+
+[node name="ProgressBar" type="HSlider" parent="Options/Buttons/Bus_music"]
+offset_left = 673.0
+offset_top = 282.0
+offset_right = 1101.0
+offset_bottom = 323.0
+scale = Vector2(2, 2)
+
+[node name="Bus_efx" type="Node2D" parent="Options/Buttons"]
+
+[node name="ProgressBar" type="HSlider" parent="Options/Buttons/Bus_efx"]
+offset_left = 673.0
+offset_top = 402.0
+offset_right = 1101.0
+offset_bottom = 443.0
+scale = Vector2(2, 2)
+
+[node name="Bus_voice" type="Node2D" parent="Options/Buttons"]
+
+[node name="ProgressBar" type="HSlider" parent="Options/Buttons/Bus_voice"]
+offset_left = 673.0
+offset_top = 522.0
+offset_right = 1101.0
+offset_bottom = 563.0
+scale = Vector2(2, 2)
+
+[node name="Back" type="Button" parent="Options/Buttons"]
+offset_left = 750.0
+offset_top = 748.0
+offset_right = 1177.0
+offset_bottom = 868.0
+theme_override_font_sizes/font_size = 38
+text = "Back
+"
+
+[node name="Sprites" type="Node2D" parent="Options"]
+z_index = 1
+
+[node name="Bus_master" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(562, 202)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_c1dx3")
+autoplay = "default"
+
+[node name="Bus_music" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(563, 322)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_mrmdi")
+autoplay = "default"
+
+[node name="Bus_efx" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(562, 442)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_cu7p1")
+autoplay = "default"
+
+[node name="Bus_voice" type="AnimatedSprite2D" parent="Options/Sprites"]
+position = Vector2(562, 562)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_840qh")
+autoplay = "default"
+
+[node name="Back" type="AnimatedSprite2D" parent="Options/Sprites"]
+visible = false
+position = Vector2(615, 624)
+scale = Vector2(0.875, 0.78125)
+sprite_frames = SubResource("SpriteFrames_5ahkq")
+autoplay = "default"
+
+[connection signal="drag_ended" from="Options/Buttons/Bus_master/ProgressBar" to="." method="_on_bus_master_progress_bar_drag_ended"]
+[connection signal="drag_ended" from="Options/Buttons/Bus_music/ProgressBar" to="." method="_on_bus_music_progress_bar_drag_ended"]
+[connection signal="drag_ended" from="Options/Buttons/Bus_efx/ProgressBar" to="." method="_on_bus_efx_progress_bar_drag_ended"]
+[connection signal="drag_ended" from="Options/Buttons/Bus_voice/ProgressBar" to="." method="_on_bus_voice_progress_bar_drag_ended"]
+[connection signal="pressed" from="Options/Buttons/Back" to="." method="_on_back_pressed"]
