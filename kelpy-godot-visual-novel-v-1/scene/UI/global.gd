@@ -11,8 +11,8 @@ var loading_next_scene_path : String = ""
 #setting_volumns
 
 var user_graphic_setting = {
-	"window_mode": "",
-	"Vsync": true,
+	"window_mode": "Window", #Window / Fullscreen 
+	"vsync": true,
 }
 
 var user_dialogue_setting = {

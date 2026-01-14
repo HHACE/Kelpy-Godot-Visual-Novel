@@ -18,10 +18,13 @@ extends Node2D
 var P1_select_index = 0
 
 func _ready() -> void:
+	load_graphics()
+	
 	P1_select_index = 0
 	_show_select_update()
 	visible = false
 	_menu_pausing_toggle(true)
+	
 	
 	for i in resolutions:
 		$"Options/Buttons/Box Resolution/OptionButton".add_item(i)
@@ -233,7 +236,58 @@ func _on_Resolution_option_button_item_selected(index: int) -> void:
 	## Set window position so it is centered
 	#get_window().set_position(screen_center - window_size / 2)
 
+#Save and load---------------------
 
+func save_graphics():
+	var json = JSON.stringify(Global.user_graphic_setting)
+	var file = FileAccess.open("user://user_settings/setting_graphics.json", FileAccess.WRITE)
+	
+	if FileAccess.open("user://user_settings/setting_graphics.json", FileAccess.ModeFlags.WRITE_READ) != null:
+		file.store_string(json)
+		file.close()
+	else:
+		push_error(FileAccess.get_open_error())
+	
+
+func load_graphics():
+	
+	if FileAccess.file_exists("user://user_settings/setting_graphics.json"):
+		var file = FileAccess.open("user://user_settings/setting_graphics.json", FileAccess.READ)
+		var parse_result = JSON.parse_string(file.get_as_text())
+
+		file.close()
+		print(parse_result)
+		if parse_result:
+			for action in parse_result.keys():
+				if action == "window_mode":
+					Global.user_graphic_setting["window_mode"] = parse_result[action]
+					
+					if parse_result[action] == "Window":
+						if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_FULLSCREEN:
+							$"Options/Buttons/Box Window Mode/CheckBox".button_pressed = true
+							$"Options/Buttons/Box Window Mode/CheckBox2".button_pressed = false
+							DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+					if parse_result[action] == "Fullscreen":
+						if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_FULLSCREEN:
+							$"Options/Buttons/Box Window Mode/CheckBox".button_pressed = false
+							$"Options/Buttons/Box Window Mode/CheckBox2".button_pressed = true
+							DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+					
+				if action == "vsync":
+					Global.user_graphic_setting["vsync"] = parse_result[action]
+					
+					if parse_result[action] == true:
+						DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+					if parse_result[action] == false:
+						DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+
+
+				
+
+
+
+
+#PRESS------------------
 func _on_back_pressed() -> void:
 	visible = false
 	_menu_pausing_toggle(true)
@@ -245,6 +299,10 @@ func _on_window_check_box_pressed() -> void:
 		#$"Options/Buttons/Box Window Mode/CheckBox".button_pressed = true
 		$"Options/Buttons/Box Window Mode/CheckBox2".button_pressed = false
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		
+		Global.user_graphic_setting["window_mode"] = "Window"
+		
+	save_graphics()
 
 
 func _on_fullscreen_check_box_2_pressed() -> void:
@@ -252,9 +310,17 @@ func _on_fullscreen_check_box_2_pressed() -> void:
 		$"Options/Buttons/Box Window Mode/CheckBox".button_pressed = false
 		#$"Options/Buttons/Box Window Mode/CheckBox2".button_pressed = true
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		
+		Global.user_graphic_setting["window_mode"] = "Fullscreen"
+		
+	save_graphics()
 
 func _on_vsync_check_box_pressed() -> void:
+	
 	if DisplayServer.window_get_vsync_mode() != DisplayServer.VSYNC_DISABLED:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+		Global.user_graphic_setting["vsync"] = false
 	else:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+		Global.user_graphic_setting["vsync"] = true
+	save_graphics()

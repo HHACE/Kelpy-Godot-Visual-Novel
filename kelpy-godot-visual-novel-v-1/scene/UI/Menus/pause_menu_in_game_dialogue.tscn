@@ -704,6 +704,7 @@ autoplay = "default"
 z_index = 1
 
 [node name="Control_inDialogue" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus"]
+visible = false
 script = ExtResource("4_q1nlo")
 
 [node name="BG" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Control_inDialogue"]
@@ -3255,7 +3256,6 @@ sprite_frames = SubResource("SpriteFrames_wwqc1")
 autoplay = "default"
 
 [node name="Graphic_inDialogue" type="Node2D" parent="Options/Menus/Setting_inDialogue/Options/Menus"]
-visible = false
 script = ExtResource("6_6k35r")
 
 [node name="BG" type="AnimatedSprite2D" parent="Options/Menus/Setting_inDialogue/Options/Menus/Graphic_inDialogue"]
